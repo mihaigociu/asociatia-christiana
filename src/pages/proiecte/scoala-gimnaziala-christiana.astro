@@ -1,0 +1,85 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = { title: 'Şcoala Gimnazială "Christiana" – Program "A doua şansă"' };
+---
+
+<Layout metadata={metadata}>
+  <HeroText tagline="Proiecte" title={'Şcoala Gimnazială "Christiana"'} subtitle={'Program "A doua şansă"'} />
+
+  <section class="py-12 max-w-4xl mx-auto px-4 prose prose-lg dark:prose-invert">
+    <p>
+      Programul este destinat persoanelor (copii sau adulţi) care au părăsit şcoala de cel puţin 4 ani şi doresc să
+      finalizeze primele 8 sau 10 clase.
+    </p>
+
+    <div class="float-right ml-6 mb-4 max-w-xs not-prose">
+      <img src="/images/uploads/2013/03/adulti1.jpg" alt="Program A doua şansă" class="rounded-lg shadow-md" />
+    </div>
+
+    <p>
+      Proiectul se adresează elevilor şi persoanelor vârstnice care au părăsit şcoala de cel puţin 4 ani şi care doresc
+      să finalizeze perioada de pregătire şcolară (8 sau 10 clase). Pe lângă cursuri şi meditaţii, Şcoala Gimnazială
+      Christiana le mai oferă: iniţierea într-o meserie, consiliere, sprijin material, activităţi recreative, şi altele.
+    </p>
+    <p>
+      Complementar, atunci când situaţia o impune, elevii beneficiază şi de alte tipuri de sprijin: înscriere la un
+      medic de familie, întocmirea dosarului pentru obţinerea cărţii de identitate, facilitarea accesului pentru un loc
+      de muncă, consilierea în vederea alegerii carierei, medierea conflictelor cu familia sau alte persoane, etc.
+    </p>
+    <p>
+      Scopul acestui proiect este susţinerea elevilor şi persoanelor vârstnice care au părăsit şcoala de cel puţin 4 ani
+      în vederea finalizării perioadei de pregătire şcolară (8 sau 10 clase).
+    </p>
+
+    <h2>Obiective</h2>
+    <ul>
+      <li>Continuarea studiilor (absolvirea a 8 sau 10 clase)</li>
+      <li>Iniţierea într-o meserie</li>
+      <li>Consilierea, asistarea şi îndrumarea psihologică, şcolară şi profesională</li>
+    </ul>
+
+    <h2>Activităţile proiectului</h2>
+    <ul>
+      <li>Educative (cursuri şi meditaţii şcolare)</li>
+      <li>Iniţiere în diverse meserii (practică profesională)</li>
+      <li>Activităţi de consiliere individuală şi de grup</li>
+      <li>Activităţi de suport material</li>
+      <li>Activităţi de îndrumare spirituală</li>
+      <li>Alte activităţi: excursii, tabere etc.</li>
+    </ul>
+
+    <h2>Beneficiari</h2>
+    <p>
+      Elevi şi persoane vârstnice care au părăsit şcoala de cel puţin 4 ani şi care doresc să finalizeze perioada de
+      pregătire şcolară (8 sau 10 clase).
+    </p>
+
+    <h2>Avantaje</h2>
+    <ul>
+      <li>Acces mai uşor pe piaţa muncii</li>
+      <li>Salarizare crescută în funcţie de numărul de clase absolvite</li>
+      <li>Dezvoltarea de capacităţi pentru rezolvarea problemelor</li>
+      <li>Dezvoltarea unor stimuli motivaţionali</li>
+    </ul>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 max-w-4xl mx-auto px-4">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/sustine-ne"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#ed9f23] hover:bg-[#d48c1a] transition-colors"
+      >
+        🤝 Donează
+      </a>
+      <a
+        href="/pagina-voluntarului"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#1d79b6] hover:bg-[#003459] transition-colors"
+      >
+        💛 Devino voluntar
+      </a>
+    </div>
+  </section>
+</Layout>

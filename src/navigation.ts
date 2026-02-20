@@ -3,180 +3,170 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Homes',
+      text: 'Despre noi',
       links: [
         {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
+          text: 'Despre noi',
+          href: getPermalink('/despre-noi'),
         },
         {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
+          text: 'Viziune și Misiune',
+          href: getPermalink('/viziune'),
         },
         {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
+          text: 'Structura de Conducere',
+          href: getPermalink('/structura-de-conducere'),
         },
         {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
+          text: 'Rapoarte de Activitate',
+          href: getPermalink('/rapoarte-de-activitate'),
+        },
+        {
+          text: 'Galerie foto',
+          href: getPermalink('/galerie'),
         },
       ],
     },
     {
-      text: 'Pages',
+      text: 'Centre',
       links: [
         {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
+          text: 'CSS „Sf. Vasile cel Mare"',
+          href: getPermalink('/centre/css-sf-vasile'),
         },
         {
-          text: 'Services',
-          href: getPermalink('/services'),
+          text: 'CAMS „Sf. Pantelimon"',
+          href: getPermalink('/centre/poli-sf-pantelimon'),
         },
         {
-          text: 'Pricing',
-          href: getPermalink('/pricing'),
+          text: 'CSS „Acoperământul Maicii Domnului"',
+          href: getPermalink('/centre/css-amd'),
         },
         {
-          text: 'About us',
-          href: getPermalink('/about'),
+          text: 'CIA „Sf. Nicolae", Mociu',
+          href: getPermalink('/centre/cia-mociu'),
         },
         {
-          text: 'Contact',
-          href: getPermalink('/contact'),
+          text: 'Grădinița Socială, Turda',
+          href: getPermalink('/centre/gradi-turda'),
         },
         {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
+          text: 'Programul „Sf. Dimitrie Basarabov"',
+          href: getPermalink('/centre/progr-sf-dimitrie'),
         },
       ],
     },
     {
-      text: 'Landing',
+      text: 'Proiecte',
       links: [
         {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
+          text: 'Școala Gimnazială „Christiana"',
+          href: getPermalink('/proiecte/scoala-gimnaziala-christiana'),
         },
         {
-          text: 'Long-form Sales',
-          href: getPermalink('/landing/sales'),
+          text: '„Învață să reușești"',
+          href: getPermalink('/proiecte/invata-sa-reusesti'),
         },
         {
-          text: 'Click-Through',
-          href: getPermalink('/landing/click-through'),
+          text: 'Burse Școlare',
+          href: getPermalink('/proiecte/burse-scolare'),
         },
         {
-          text: 'Product Details (or Services)',
-          href: getPermalink('/landing/product'),
+          text: 'Meditații Școlare',
+          href: getPermalink('/proiecte/meditatii-scolare'),
         },
         {
-          text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
+          text: 'Centrul Comunitar pentru Tineret',
+          href: getPermalink('/proiecte/centrul-comunitar-pentru-tineret'),
         },
         {
-          text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
+          text: 'Pentru Viață',
+          href: getPermalink('/proiecte/pentru-viata'),
+        },
+        {
+          text: 'Cantina Socială „Sf. Arhidiacon Ștefan"',
+          href: getPermalink('/proiecte/cantina-sociala'),
+        },
+        {
+          text: '„Părinți și adolescenți"',
+          href: getPermalink('/proiecte/parinti-si-adolescenti'),
         },
       ],
     },
     {
-      text: 'Blog',
-      links: [
-        {
-          text: 'Blog List',
-          href: getBlogPermalink(),
-        },
-        {
-          text: 'Article',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-        },
-        {
-          text: 'Article (with MDX)',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
-        },
-        {
-          text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
-        },
-        {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
-        },
-      ],
+      text: 'Noutăți',
+      href: getBlogPermalink(),
     },
     {
-      text: 'Widgets',
-      href: '#',
+      text: 'Contact',
+      href: getPermalink('/contact'),
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/arthelokyo/astrowind', target: '_blank' }],
+  actions: [
+    {
+      text: 'Donează',
+      href: getPermalink('/sustine-ne'),
+      class: 'bg-[#ed9f23] hover:bg-[#d68d1a] text-white',
+    },
+  ],
 };
 
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: 'Centre',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        { text: 'CSS „Sf. Vasile cel Mare"', href: getPermalink('/centre/css-sf-vasile') },
+        { text: 'CAMS „Sf. Pantelimon"', href: getPermalink('/centre/poli-sf-pantelimon') },
+        { text: 'CSS „Acoperământul Maicii Domnului"', href: getPermalink('/centre/css-amd') },
+        { text: 'CIA „Sf. Nicolae", Mociu', href: getPermalink('/centre/cia-mociu') },
+        { text: 'Grădinița Socială, Turda', href: getPermalink('/centre/gradi-turda') },
+        { text: 'Programul „Sf. Dimitrie Basarabov"', href: getPermalink('/centre/progr-sf-dimitrie') },
       ],
     },
     {
-      title: 'Platform',
+      title: 'Proiecte',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
+        { text: 'Școala Gimnazială „Christiana"', href: getPermalink('/proiecte/scoala-gimnaziala-christiana') },
+        { text: '„Învață să reușești"', href: getPermalink('/proiecte/invata-sa-reusesti') },
+        { text: 'Burse Școlare', href: getPermalink('/proiecte/burse-scolare') },
+        { text: 'Meditații Școlare', href: getPermalink('/proiecte/meditatii-scolare') },
+        { text: 'Centrul Comunitar pentru Tineret', href: getPermalink('/proiecte/centrul-comunitar-pentru-tineret') },
+        { text: 'Cantina Socială', href: getPermalink('/proiecte/cantina-sociala') },
+        { text: 'Pentru Viață', href: getPermalink('/proiecte/pentru-viata') },
+        { text: '„Părinți și adolescenți"', href: getPermalink('/proiecte/parinti-si-adolescenti') },
       ],
     },
     {
-      title: 'Support',
+      title: 'Informații',
       links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
+        { text: 'Despre noi', href: getPermalink('/despre-noi') },
+        { text: 'Viziune și Misiune', href: getPermalink('/viziune') },
+        { text: 'Rapoarte de Activitate', href: getPermalink('/rapoarte-de-activitate') },
+        { text: 'Galerie foto', href: getPermalink('/galerie') },
+        { text: 'Contact', href: getPermalink('/contact') },
       ],
     },
     {
-      title: 'Company',
+      title: 'Susține-ne',
       links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+        { text: 'Donează', href: getPermalink('/sustine-ne') },
+        { text: 'Modalități de susținere', href: getPermalink('/modalitati-de-sustinere') },
+        { text: 'Drepturile Donatorului', href: getPermalink('/drepturile-donatorului') },
+        { text: 'Pagina Voluntarului', href: getPermalink('/pagina-voluntarului') },
       ],
     },
   ],
-  secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
-  ],
+  secondaryLinks: [{ text: 'Drepturile Donatorului', href: getPermalink('/drepturile-donatorului') }],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+    {
+      ariaLabel: 'Facebook',
+      icon: 'tabler:brand-facebook',
+      href: 'https://www.facebook.com/asociatia.christiana.cluj',
+    },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/arthelokyo/astrowind' },
   ],
   footNote: `
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://github.com/arthelokyo"> Arthelokyo</a> · All rights reserved.
+    © ${new Date().getFullYear()} Asociația Filantropică Medical-Creștină Christiana - Filiala Cluj. Toate drepturile rezervate.
   `,
 };

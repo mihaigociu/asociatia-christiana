@@ -1,0 +1,87 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = { title: 'CSS "Sf. Vasile cel Mare"' };
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Centre"
+    title={'Centrul de Servicii Sociale "Sf. Vasile cel Mare"'}
+    subtitle="Cluj-Napoca · Din 1996"
+  />
+
+  <section class="py-12 max-w-4xl mx-auto px-4 prose prose-lg dark:prose-invert">
+    <p>
+      Centrul a fost înfiinţat în anul <strong>1996</strong> cu scopul de a oferi servicii specializate pentru prevenirea
+      şi recuperarea din abandon şcolar pentru 40 de copii din mun. Cluj-Napoca.
+    </p>
+    <p>
+      De atunci până în prezent, centrul a răspuns permanent la nevoile identificate în comunitate dezvoltând o serie de
+      servicii complexe atât în domeniul social prin proiectele sociale cât şi în domeniul educaţional prin proiecte
+      educaţionale.
+    </p>
+
+    <h2>Scop</h2>
+    <p>
+      Creşterea calităţii vieţii morale şi materiale a persoanelor din comunitate prin dezvoltarea de proiecte sociale
+      şi educaţionale.
+    </p>
+
+    <h2>Proiecte sociale</h2>
+    <ul>
+      <li>
+        <a href="/proiecte/invata-sa-reusesti">"Învaţă să reuşeşti"</a> – proiect pentru prevenirea abandonului şcolar
+      </li>
+      <li><a href="/proiecte/burse-scolare">Burse Şcolare</a></li>
+      <li><a href="/proiecte/cantina-sociala">Cantina Socială "Sf. Arhidiacon Ştefan"</a></li>
+      <li>"Solidaritatea creştină"</li>
+    </ul>
+
+    <h2>Proiecte educative</h2>
+    <ul>
+      <li>"Părinţi şi adolescenţi" – Clubul părinţilor şi Ateliere pentru adolescenţi</li>
+      <li><a href="/proiecte/meditatii-scolare">Meditaţii Şcolare</a></li>
+      <li><a href="/proiecte/centrul-comunitar-pentru-tineret">Centrul Comunitar pentru Tineret</a></li>
+      <li>
+        <a href="/proiecte/scoala-gimnaziala-christiana">Şcoala Gimnazială "Christiana" – program "A doua şansă"</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Contact info -->
+  <section class="py-8 max-w-4xl mx-auto px-4">
+    <div class="bg-[#eaf6ff] dark:bg-gray-800 rounded-2xl p-6">
+      <h3 class="text-lg font-bold text-[#003459] dark:text-white mb-3">Date de contact</h3>
+      <div class="space-y-2 text-gray-700 dark:text-gray-300 text-sm">
+        <p>📍 Aleea Moldoveanu nr. 3, Cluj-Napoca</p>
+        <p>📞 0264-457552/3, 0733-070590</p>
+        <p>
+          ✉️ <a href="mailto:secretariat@scoalachristiana.ro" class="text-[#1d79b6] hover:underline"
+            >secretariat@scoalachristiana.ro</a
+          >
+        </p>
+        <p>🏦 IBAN: <span class="font-mono">RO68RNCB0106001668730010</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 max-w-4xl mx-auto px-4">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/sustine-ne"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#ed9f23] hover:bg-[#d48c1a] transition-colors"
+      >
+        🤝 Donează
+      </a>
+      <a
+        href="/pagina-voluntarului"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#1d79b6] hover:bg-[#003459] transition-colors"
+      >
+        💛 Devino voluntar
+      </a>
+    </div>
+  </section>
+</Layout>

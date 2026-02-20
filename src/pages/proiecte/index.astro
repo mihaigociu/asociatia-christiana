@@ -1,0 +1,111 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = { title: 'Proiectele noastre' };
+
+const proiecte = [
+  {
+    name: 'Şcoala Gimnazială "Christiana" – Program "A doua şansă"',
+    description:
+      'Program destinat persoanelor care au depășit cu cel puțin 4 ani vârsta corespunzătoare clasei și doresc să finalizeze primele 8 sau 10 clase.',
+    href: '/proiecte/scoala-gimnaziala-christiana',
+    icon: '🎓',
+  },
+  {
+    name: '"Învaţă să reuşeşti"',
+    description:
+      'Proiect pentru prevenirea abandonului şcolar adresat elevilor cu situaţie şcolară problematică, în pragul corigenţei sau repetenţiei.',
+    href: '/proiecte/invata-sa-reusesti',
+    icon: '📖',
+  },
+  {
+    name: 'Burse şcolare',
+    description:
+      'Susținere materială și educativă pentru elevi din clasele I-XII care provin din familii cu risc social.',
+    href: '/proiecte/burse-scolare',
+    icon: '🎒',
+  },
+  {
+    name: 'Meditaţii Şcolare',
+    description:
+      'Meditații gratuite pentru elevii claselor I-VIII cu dificultăți de învățare: matematică, limba română, limbi străine.',
+    href: '/proiecte/meditatii-scolare',
+    icon: '📚',
+  },
+  {
+    name: 'Centrul Comunitar pentru Tineret',
+    description:
+      'Activități educative și recreative pentru copii și tineri 5-19 ani: sport, artă, limbi străine, muzică.',
+    href: '/proiecte/centrul-comunitar-pentru-tineret',
+    icon: '🌟',
+  },
+  {
+    name: '"Pentru Viaţă"',
+    description:
+      'Informare și consiliere pre și post-avort. Protecția vieții de la concepţie, sprijin pentru mamele în situații de criză.',
+    href: '/proiecte/pentru-viata',
+    icon: '💗',
+  },
+  {
+    name: 'Cantina Socială "Sf. Arhidiacon Ştefan"',
+    description: 'Masă caldă zilnică și pachete alimentare pentru persoanele defavorizate. 85 de beneficiari anual.',
+    href: '/proiecte/cantina-sociala',
+    icon: '🍲',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Proiecte"
+    title="Proiectele noastre"
+    subtitle="Dezvoltăm proiecte sociale, educaționale și medicale care răspund nevoilor comunității din județul Cluj."
+  />
+
+  <section class="py-12 max-w-5xl mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-8">
+      {
+        proiecte.map((proiect) => (
+          <a
+            href={proiect.href}
+            class="group block bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-l-4 border-[#ed9f23]"
+          >
+            <div class="p-6">
+              <div class="flex items-start gap-4">
+                <span class="text-4xl flex-shrink-0">{proiect.icon}</span>
+                <div>
+                  <h3 class="text-xl font-bold text-[#003459] dark:text-white group-hover:text-[#1d79b6] transition-colors">
+                    {proiect.name}
+                  </h3>
+                  <p class="text-gray-600 dark:text-gray-400 mt-2">{proiect.description}</p>
+                  <span class="inline-block mt-3 text-[#ed9f23] font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                    Află mai multe →
+                  </span>
+                </div>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 max-w-4xl mx-auto px-4">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/sustine-ne"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#ed9f23] hover:bg-[#d48c1a] transition-colors"
+      >
+        🤝 Donează
+      </a>
+      <a
+        href="/pagina-voluntarului"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#1d79b6] hover:bg-[#003459] transition-colors"
+      >
+        💛 Devino voluntar
+      </a>
+    </div>
+  </section>
+</Layout>

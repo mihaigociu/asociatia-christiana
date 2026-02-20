@@ -1,0 +1,118 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = { title: 'Grădinița Socială Turda' };
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Centre"
+    title={'Grădinița Socială "Acoperământul Maicii Domnului"'}
+    subtitle="Turda, jud. Cluj · Din 2005"
+  />
+
+  <!-- Citat din Evanghelie -->
+  <section class="py-6 max-w-4xl mx-auto px-4">
+    <blockquote
+      class="border-l-4 border-[#ed9f23] bg-[#eaf6ff] dark:bg-gray-800 rounded-r-xl px-6 py-4 italic text-lg text-[#003459] dark:text-gray-200"
+    >
+      „Lăsaţi copiii să vină la Mine, că a unora ca aceştora este Împărăţia cerurilor"
+      <footer class="mt-2 text-sm not-italic text-gray-600 dark:text-gray-400">— Matei 19, 14</footer>
+    </blockquote>
+  </section>
+
+  <section class="py-12 max-w-4xl mx-auto px-4 prose prose-lg dark:prose-invert">
+    <p>
+      A fost înfiinţată în anul <strong>2005</strong> din dorinţa de a oferi servicii educaţionale gratuite copiilor care
+      provin din rândul unor familii aflate în dificultate. Grădiniţa Socială funcţionează la mansarda clădirii Centrului
+      de Îngrijire pentru vârstnici Turda, având o sală de grupă, un vestiar şi un grup sanitar dotate corespunzător necesităţilor
+      copiilor.
+    </p>
+    <p>
+      Copiii se bucură aici de un sistem educativ de calitate, având asigurat un ambient plăcut şi o bază
+      didactico-materială generoasă.
+    </p>
+
+    <img
+      src="/images/uploads/2013/04/SAM_1994.jpg"
+      alt="Grădinița Socială Turda"
+      class="rounded-xl shadow-md my-6 mx-auto"
+    />
+
+    <h2>Misiune</h2>
+    <p>
+      Sprijinirea accesului la educaţie a tuturor copiilor defavorizaţi pentru a dobândi cunoştinţele necesare unei bune
+      dezvoltări.
+    </p>
+
+    <h2>Obiective</h2>
+    <ul>
+      <li>
+        Prevenirea timpurie a abandonului şcolar prin integrarea şcolară şi socială a copiilor proveniţi din familii
+        defavorizate
+      </li>
+      <li>
+        Stimularea şi încurajarea creativităţii preşcolarilor prin activităţi de muzică, teatru, arte vizuale, limbi
+        străine
+      </li>
+      <li>Dezvoltarea socio-emoţională a preşcolarilor prin derularea de activităţi specifice</li>
+    </ul>
+
+    <h2>Activităţi şi parteneriate</h2>
+    <ul>
+      <li>Proiectul judeţean de dezvoltare socio-emoţională "Da! Poţi!"</li>
+      <li>Proiectul regional pentru formarea unui stil de viaţă sănătos: "Aleg să fiu sănătos"</li>
+      <li>Parteneriat educaţional "Împreună mici şi mari ne jucăm şi învăţăm"</li>
+      <li>Parteneriat cu familia: "Grădiniţa părinţilor"</li>
+      <li>Parteneriat naţional "Zâmbet de copil"</li>
+      <li>Parteneriat cu cabinetul de logopedie "Învăţăm să vorbim corect"</li>
+    </ul>
+
+    <img
+      src="/images/uploads/2013/04/PIC_0423.jpg"
+      alt="Activități la Grădinița Socială Turda"
+      class="rounded-xl shadow-md my-6 mx-auto"
+    />
+
+    <h2>Grup ţintă</h2>
+    <p>
+      Grădiniţa funcţionează cu o grupă de <strong>25 copii</strong>, cu vârste cuprinse între 3 şi 6 ani, care provin
+      din familii monoparentale cu probleme sociale şi economice grave.
+    </p>
+    <p>
+      Rezultatele obţinute de copii în cadrul grădiniţei noastre sunt evidente. <strong>Toţi copiii</strong> urmează cu succes
+      următoarea etapă a şcolarizării.
+    </p>
+  </section>
+
+  <!-- Contact info -->
+  <section class="py-8 max-w-4xl mx-auto px-4">
+    <div class="bg-[#eaf6ff] dark:bg-gray-800 rounded-2xl p-6">
+      <h3 class="text-lg font-bold text-[#003459] dark:text-white mb-3">Date de contact</h3>
+      <div class="space-y-2 text-gray-700 dark:text-gray-300 text-sm">
+        <p>📍 Aleea Plopilor nr. 7, Turda, jud. Cluj</p>
+        <p>📞 0264 317 772</p>
+        <p>✉️ <a href="mailto:nicoamd@yahoo.com" class="text-[#1d79b6] hover:underline">nicoamd@yahoo.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 max-w-4xl mx-auto px-4">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/sustine-ne"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#ed9f23] hover:bg-[#d48c1a] transition-colors"
+      >
+        🤝 Donează
+      </a>
+      <a
+        href="/pagina-voluntarului"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#1d79b6] hover:bg-[#003459] transition-colors"
+      >
+        💛 Devino voluntar
+      </a>
+    </div>
+  </section>
+</Layout>

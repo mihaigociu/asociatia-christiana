@@ -1,0 +1,102 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = { title: 'CIA "Sf. Nicolae" Mociu' };
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Centre"
+    title={'Centrul de Îngrijire şi Asistenţă "Sf. Nicolae"'}
+    subtitle="Mociu, jud. Cluj · Din 2001"
+  />
+
+  <!-- Citat Sf. Ioan Gură de Aur -->
+  <section class="py-6 max-w-4xl mx-auto px-4">
+    <blockquote
+      class="border-l-4 border-[#ed9f23] bg-[#eaf6ff] dark:bg-gray-800 rounded-r-xl px-6 py-4 italic text-lg text-[#003459] dark:text-gray-200"
+    >
+      „Dacă ar fi dragoste între oameni n-ar fi nici sărăcie şi nici bogăţie nemăsurată."
+      <footer class="mt-2 text-sm not-italic text-gray-500 dark:text-gray-400">— Sf. Ioan Gură de Aur</footer>
+    </blockquote>
+  </section>
+
+  <section class="py-12 max-w-4xl mx-auto px-4 prose prose-lg dark:prose-invert">
+    <p>
+      În anul <strong>2001</strong>, Asociaţia Filantropică Medical-Creştină "CHRISTIANA" a iniţiat un proiect prin care
+      şi-a propus să vină în sprijinul persoanelor vârstnice. Astfel s-a amenajat un imobil cu destinaţia Centrul de
+      Îngrijire şi Asistenţă în localitatea Mociu, jud. Cluj.
+    </p>
+    <p>
+      Diversitatea serviciilor şi activităţile puse la dispoziţie asistaţilor Centrului sunt orientate în scopul
+      satisfacerii nevoilor persoanelor vârstnice şi urmăresc bunăstarea psiho-fizico-socio-spirituală a asistaţilor.
+    </p>
+
+    <h2>Obiective</h2>
+    <ul>
+      <li>
+        Oferirea de condiţii de îngrijire care să respecte identitatea, integritatea şi demnitatea persoanei vârstnice
+        asistate
+      </li>
+      <li>Stimularea participării persoanelor vârstnice asistate la viaţa socială</li>
+      <li>
+        Facilitarea şi încurajarea legăturilor interumane a persoanelor vârstnice asistate, inclusiv cu familiile din
+        care provin acestea
+      </li>
+      <li>
+        Asigurarea supravegherii şi îngrijirii medicale necesare persoanelor vârstnice asistate, potrivit
+        reglementărilor privind asigurările sociale de sănătate
+      </li>
+    </ul>
+
+    <h2>Grup ţintă</h2>
+    <p>Persoane vârstnice aflate în situaţie de dependenţă socio-medicală.</p>
+
+    <!-- Imagini -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 not-prose mt-8">
+      <img
+        src="/images/uploads/2013/04/00000214_large.jpg"
+        alt="Centrul de Îngrijire şi Asistenţă Sf. Nicolae, Mociu"
+        class="rounded-xl shadow-md w-full h-auto"
+        loading="lazy"
+      />
+      <img
+        src="/images/uploads/2013/04/00000213_large.jpg"
+        alt="Centrul de Îngrijire şi Asistenţă Sf. Nicolae, Mociu"
+        class="rounded-xl shadow-md w-full h-auto"
+        loading="lazy"
+      />
+    </div>
+  </section>
+
+  <!-- Contact info -->
+  <section class="py-8 max-w-4xl mx-auto px-4">
+    <div class="bg-[#eaf6ff] dark:bg-gray-800 rounded-2xl p-6">
+      <h3 class="text-lg font-bold text-[#003459] dark:text-white mb-3">Date de contact</h3>
+      <div class="space-y-2 text-gray-700 dark:text-gray-300 text-sm">
+        <p>📍 Str. Principală nr. 127, Mociu, jud. Cluj</p>
+        <p>📞 0264 235 566</p>
+        <p>✉️ <a href="mailto:ciamociu@yahoo.com" class="text-[#1d79b6] hover:underline">ciamociu@yahoo.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 max-w-4xl mx-auto px-4">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/sustine-ne"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#ed9f23] hover:bg-[#d48c1a] transition-colors"
+      >
+        🤝 Donează
+      </a>
+      <a
+        href="/pagina-voluntarului"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#1d79b6] hover:bg-[#003459] transition-colors"
+      >
+        💛 Devino voluntar
+      </a>
+    </div>
+  </section>
+</Layout>

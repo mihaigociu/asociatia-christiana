@@ -1,0 +1,83 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = { title: 'Meditaţii Şcolare' };
+---
+
+<Layout metadata={metadata}>
+  <HeroText tagline="Proiecte" title="Meditaţii Şcolare" subtitle="Din martie 2004 · Clasele I-VIII" />
+
+  <section class="py-12 max-w-4xl mx-auto px-4 prose prose-lg dark:prose-invert">
+    <p>
+      Proiectul Meditaţii Şcolare a luat fiinţă în Martie 2004 şi e conceput pentru elevi din clasele 1-8 care au
+      dificultăţi de învăţare, şi pentru cei care doresc îmbunătăţirea rezultatelor şcolare. Proiectul se desfăşoară pe
+      durata întregului an şcolar, urmărind curricula.
+    </p>
+    <p>
+      În cadrul proiectului, copiii pot urma cursuri de: matematică, limba română, limba engleză, limba franceză şi
+      altele (incluzând şcoala primară).
+    </p>
+    <p>
+      Activitatea efectivă constă în clarificarea conceptelor de bază care sunt predate la clasă (în şcolile unde învaţă
+      copiii), rezolvarea de probleme aplicative pentru noţiunile teoretice, şi ajutor în vederea efectuării temei de
+      casă.
+    </p>
+
+    <h2>Scop</h2>
+    <p>Oferirea de meditaţii şcolare elevilor claselor I-VIII, în vederea:</p>
+    <ul>
+      <li>Obţinerii unor rezultate şcolare crescute</li>
+      <li>Evitării situaţiilor de corigenţe şi repetenţe</li>
+    </ul>
+
+    <h2>Obiective</h2>
+    <ul>
+      <li>Oferirea de meditaţii şcolare</li>
+      <li>Consilierea, asistarea şi îndrumarea şcolară (la cerere)</li>
+      <li>Creşterea gradului de implicare a părinţilor în educaţia copiilor</li>
+    </ul>
+
+    <h2>Activităţi</h2>
+    <ul>
+      <li>Activităţi educaţionale (meditaţii şcolare)</li>
+      <li>Activităţi de suport material (la cerere, pentru persoanele care îndeplinesc criteriile sociale)</li>
+      <li>Activităţi recreativ-educative (atelier creaţie, dezbateri tematice, jocuri şi concursuri sportive, etc.)</li>
+    </ul>
+
+    <h2>Grup ţintă</h2>
+    <p>Beneficiarii acestui proiect sunt elevii claselor I-VIII care:</p>
+    <ul>
+      <li>Doresc creşterea rezultatelor şcolare</li>
+      <li>Au probleme de învăţare şcolară individuală</li>
+    </ul>
+
+    <h2>Modalităţi de susţinere</h2>
+    <ul>
+      <li>Voluntariat</li>
+      <li>Sponsorizări, donaţii, 3,5%, etc.</li>
+      <li>Contribuţii în natură: rechizite, obiecte de papetărie, etc.</li>
+      <li>Promovarea proiectului în comunitate</li>
+      <li>Sprijin în vederea renovării şi dotării clădirii şi a curţii</li>
+      <li>Finanţare proiect, etc.</li>
+    </ul>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 max-w-4xl mx-auto px-4">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/sustine-ne"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#ed9f23] hover:bg-[#d48c1a] transition-colors"
+      >
+        🤝 Donează
+      </a>
+      <a
+        href="/pagina-voluntarului"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#1d79b6] hover:bg-[#003459] transition-colors"
+      >
+        💛 Devino voluntar
+      </a>
+    </div>
+  </section>
+</Layout>

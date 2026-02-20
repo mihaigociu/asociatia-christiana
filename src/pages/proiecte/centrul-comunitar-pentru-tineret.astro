@@ -1,0 +1,80 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = { title: 'Centrul Comunitar pentru Tineret' };
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Proiecte"
+    title="Centrul Comunitar pentru Tineret"
+    subtitle="Activităţi educative şi recreative · 5–19 ani"
+  />
+
+  <section class="py-12 max-w-4xl mx-auto px-4 prose prose-lg dark:prose-invert">
+    <p>
+      Centrul Comunitar pentru Tineret este un proiect care se adresează copiilor şi tinerilor cu vârsta cuprinsă între
+      <strong>5–19 ani</strong>, cărora li se oferă posibilitatea formării şi dezvoltării abilităţilor, prin derularea
+      de activităţi de petrecere a timpului liber. Activitatea centrului se desfăşoară atât pe parcursul anului şcolar –
+      ateliere / cercuri – cât şi în vacanţa de vară – Şcoala de vară.
+    </p>
+
+    <div class="float-right ml-6 mb-4 max-w-xs not-prose">
+      <img src="/images/uploads/2013/05/Pictura2-1024x749.jpg" alt="Atelier de pictură" class="rounded-lg shadow-md" />
+    </div>
+
+    <h2>Obiective</h2>
+    <ul>
+      <li>Oferirea de activităţi educative, în vederea educării şi formării intelectuale</li>
+      <li>Oferirea de activităţi recreative, în vederea deprinderii de abilităţi artistice şi sportive</li>
+    </ul>
+
+    <h2>Ateliere în timpul anului şcolar</h2>
+    <ul>
+      <li>Sport (fotbal, volei, baschet, tenis de masă, badminton, şah, rummy)</li>
+      <li>Pictură şi lucru manual (tapiserie, broderie, realizarea de mărţişoare şi felicitări, etc.)</li>
+      <li>Limbi străine (engleză şi germană)</li>
+      <li>Pian şi chitară</li>
+      <li>Grupuri de discuţii pe teme de interes (responsabilitate civică, religie, etc.)</li>
+      <li>Vizionare de filme documentare şi educative</li>
+      <li>Vizite la muzee</li>
+      <li>Tabere la Valea Vadului</li>
+    </ul>
+
+    <div class="float-right ml-6 mb-4 max-w-xs not-prose clear-right">
+      <img src="/images/uploads/2013/05/Chitara4-1024x768.jpg" alt="Lecţii de chitară" class="rounded-lg shadow-md" />
+    </div>
+
+    <h2>Şcoala de Vară</h2>
+    <ul>
+      <li>Cultură şi Civilizaţie Engleză</li>
+      <li>Eu în Societate</li>
+      <li>Eco Junior</li>
+      <li>Din Grădină în Bucătărie</li>
+      <li>Lumea Poveştilor</li>
+      <li>Minte Sănătoasă în Corp Sănătos</li>
+    </ul>
+
+    <h2>Grupul ţintă</h2>
+    <p>Copiii şi tinerii cu vârsta cuprinsă între 5–19 ani.</p>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 max-w-4xl mx-auto px-4">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/sustine-ne"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#ed9f23] hover:bg-[#d48c1a] transition-colors"
+      >
+        🤝 Donează
+      </a>
+      <a
+        href="/pagina-voluntarului"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#1d79b6] hover:bg-[#003459] transition-colors"
+      >
+        💛 Devino voluntar
+      </a>
+    </div>
+  </section>
+</Layout>

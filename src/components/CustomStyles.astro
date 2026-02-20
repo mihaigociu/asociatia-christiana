@@ -1,63 +1,65 @@
 ---
-import '@fontsource-variable/inter';
-
-// 'DM Sans'
-// Nunito
-// Dosis
-// Outfit
-// Roboto
-// Literata
-// 'IBM Plex Sans'
-// Karla
-// Poppins
-// 'Fira Sans'
-// 'Libre Franklin'
-// Inconsolata
-// Raleway
-// Oswald
-// 'Space Grotesk'
-// Urbanist
+// Christiana theme fonts - Open Sans (light 300) + Lora (serif)
 ---
 
 <style is:inline>
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Lora:wght@400;500;600;700&display=swap');
+
   :root {
-    --aw-font-sans: 'Inter Variable';
-    --aw-font-serif: 'Inter Variable';
-    --aw-font-heading: 'Inter Variable';
+    /* Christiana fonts */
+    --aw-font-sans: 'Open Sans', sans-serif;
+    --aw-font-serif: 'Lora', serif;
+    --aw-font-heading: 'Open Sans', sans-serif;
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    /* Christiana color palette:
+       @white: #eaf6ff  @blue: #1d79b6  @dark-blue: #003459
+       @accent: #ed9f23  @black: #141115 */
+    --aw-color-primary: rgb(29 121 182); /* #1d79b6 - blue */
+    --aw-color-secondary: rgb(0 52 89); /* #003459 - dark-blue */
+    --aw-color-accent: rgb(237 159 35); /* #ed9f23 - accent/gold */
 
-    --aw-color-text-heading: rgb(0 0 0);
-    --aw-color-text-default: rgb(16 16 16);
-    --aw-color-text-muted: rgb(16 16 16 / 66%);
+    --aw-color-text-heading: rgb(20 17 21); /* #141115 - black */
+    --aw-color-text-default: rgb(20 17 21); /* #141115 */
+    --aw-color-text-muted: rgb(20 17 21 / 66%);
     --aw-color-bg-page: rgb(255 255 255);
 
-    --aw-color-bg-page-dark: rgb(3 6 32);
+    --aw-color-bg-page-dark: rgb(0 52 89); /* dark-blue for dark mode */
+
+    /* Custom Christiana variables */
+    --christiana-white: #eaf6ff;
+    --christiana-blue: #1d79b6;
+    --christiana-dark-blue: #003459;
+    --christiana-accent: #ed9f23;
+    --christiana-black: #141115;
 
     ::selection {
-      background-color: lavender;
+      background-color: #eaf6ff;
+      color: #003459;
     }
   }
 
   .dark {
-    --aw-font-sans: 'Inter Variable';
-    --aw-font-serif: 'Inter Variable';
-    --aw-font-heading: 'Inter Variable';
+    --aw-font-sans: 'Open Sans', sans-serif;
+    --aw-font-serif: 'Lora', serif;
+    --aw-font-heading: 'Open Sans', sans-serif;
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    --aw-color-primary: rgb(29 121 182);
+    --aw-color-secondary: rgb(234 246 255); /* light for contrast */
+    --aw-color-accent: rgb(237 159 35);
 
-    --aw-color-text-heading: rgb(247, 248, 248);
+    --aw-color-text-heading: rgb(234 246 255);
     --aw-color-text-default: rgb(229 236 246);
     --aw-color-text-muted: rgb(229 236 246 / 66%);
-    --aw-color-bg-page: rgb(3 6 32);
+    --aw-color-bg-page: rgb(0 52 89);
 
     ::selection {
-      background-color: black;
-      color: snow;
+      background-color: #1d79b6;
+      color: #eaf6ff;
     }
+  }
+
+  /* Christiana base typography - light weight body text */
+  body {
+    font-weight: 300;
   }
 </style>

@@ -1,399 +1,315 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import { Image } from 'astro:assets';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+import logoSfVasile from '~/assets/images/logos/logo-sf-vasile.jpg';
+import logoSfPantelimon from '~/assets/images/logos/logo-sf-pantelimon.jpg';
+import logoAmd from '~/assets/images/logos/logo-amd.jpg';
+import logoSfNicolae from '~/assets/images/logos/logo-sf-nicolae.jpg';
+import logoGradinita from '~/assets/images/logos/logo-gradinita.jpg';
+import logoSfBasarabov from '~/assets/images/logos/logo-sf-basarabov.jpg';
+
+const centres = [
+  {
+    title: 'CSS "Sf. Vasile cel Mare"',
+    description: 'Centrul de Servicii Sociale care adăpostește Școala Christiana și programele educaționale.',
+    image: logoSfVasile,
+    href: '/centre/css-sf-vasile',
+  },
+  {
+    title: 'CAMS "Sf. Pantelimon"',
+    description: 'Centrul de Asistență Medico-Socială oferind consultații medicale și medicamente gratuite.',
+    image: logoSfPantelimon,
+    href: '/centre/poli-sf-pantelimon',
+  },
+  {
+    title: 'CSS "Acoperământul Maicii Domnului"',
+    description: 'Centru de zi pentru copii cu vârsta cuprinsă între 0-2 ani, aflați în risc de abandon.',
+    image: logoAmd,
+    href: '/centre/css-amd',
+  },
+  {
+    title: 'CIA "Sf. Nicolae", Mociu',
+    description: 'Centrul de Îngrijire și Asistență destinat persoanelor vârstnice sărace și singure.',
+    image: logoSfNicolae,
+    href: '/centre/cia-mociu',
+  },
+  {
+    title: 'Grădinița Socială, Turda',
+    description: 'Grădinița Socială "Acoperământul Maicii Domnului" pentru copii din familii defavorizate.',
+    image: logoGradinita,
+    href: '/centre/gradi-turda',
+  },
+  {
+    title: 'Programul "Sf. Dimitrie Basarabov"',
+    description: 'Program de informare și consiliere în adicții - ambulatoriu și centru de zi.',
+    image: logoSfBasarabov,
+    href: '/centre/progr-sf-dimitrie',
+  },
+];
+
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'Asociația Filantropică Medical-Creștină Christiana - Filiala Cluj',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
+  <!-- Hero Section - matches the original carousel/banner area -->
   <Hero
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
+        text: 'Descoperă proiectele',
+        href: '#proiecte',
+        icon: 'tabler:arrow-right',
       },
-      { text: 'Learn more', href: '#features' },
+      {
+        text: 'Donează',
+        href: '/sustine-ne',
+        icon: 'tabler:heart',
+      },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white"> Astro 5.0</span> + Tailwind CSS
+      <span class="text-accent">Construim</span> comunitatea
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 5.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
+      <span class="text-lg text-[#eaf6ff]/90">
+        Asociația Filantropică Medical-Creștină CHRISTIANA - Filiala Cluj oferă asistență medicală, socială și
+        educațională persoanelor defavorizate din 1991.
+      </span>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#003459] to-[#1d79b6]"></div>
     </Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
+  <!-- Donation Strip - matches the original donation banner -->
+  <section class="bg-[#ed9f23] py-8">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-white text-center md:text-left">
+        <h2 class="text-2xl font-bold">Susține-ne în misiunea noastră</h2>
+        <p class="text-white/90">
+          Prin donația ta, contribui la o viață mai bună pentru persoanele defavorizate din comunitatea noastră.
+        </p>
+      </div>
+      <a
+        href="/sustine-ne"
+        class="inline-flex items-center gap-2 bg-white text-[#ed9f23] font-bold px-8 py-3 rounded hover:bg-[#eaf6ff] transition-colors whitespace-nowrap"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"
+          ><path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+          ></path></svg
+        >
+        Donează acum
+      </a>
+    </div>
+  </section>
 
-  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
-
-  <!-- Features Widget *************** -->
-
-  <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
-    items={[
-      {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Ready-to-use Components',
-        description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
+  <!-- Stats - Organization numbers -->
+  <Stats
+    title="Christiana în cifre"
+    subtitle="Peste 30 de ani de activitate în slujba comunității"
+    stats={[
+      { title: 'Ani de activitate', amount: '30+' },
+      { title: 'Centre', amount: '6' },
+      { title: 'Proiecte', amount: '8' },
+      { title: 'Fondată', amount: '1991' },
     ]}
   />
 
-  <!-- Content Widget **************** -->
+  <!-- Centers Section - with center logos from old site -->
+  <section id="centre" class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 md:mb-12">
+        <p class="text-sm font-bold uppercase tracking-wide text-[#1d79b6] mb-2">Centre</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#003459]">Centrele noastre</h2>
+        <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+          Asociația Christiana operează mai multe centre de asistență socială, medicală și educațională în județul Cluj.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          centres.map((centre) => (
+            <a
+              href={centre.href}
+              class="group relative flex flex-col rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-white border border-gray-100"
+            >
+              <div class="flex items-center justify-center bg-[#eaf6ff] p-6 min-h-[120px]">
+                <Image
+                  src={centre.image}
+                  alt={centre.title}
+                  class="max-w-[200px] max-h-[80px] w-auto h-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                  widths={[250]}
+                />
+              </div>
+              <div class="p-5 flex-1 flex flex-col">
+                <h3 class="text-lg font-bold text-[#003459] group-hover:text-[#1d79b6] transition-colors">
+                  {centre.title}
+                </h3>
+                <p class="mt-2 text-sm text-gray-600 flex-1">{centre.description}</p>
+                <span class="inline-flex items-center mt-3 text-sm font-semibold text-[#1d79b6] group-hover:text-[#003459]">
+                  Află mai multe
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
 
-  <Content
-    isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+  <!-- Projects Section -->
+  <Features
+    id="proiecte"
+    tagline="Proiecte"
+    title="Proiectele noastre"
+    subtitle="Programe sociale și educaționale care transformă vieți."
+    columns={3}
     items={[
       {
-        title: 'Built on top of Astro 5.0',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+        title: 'Școala Gimnazială "Christiana"',
+        description: 'Program "A doua șansă" pentru persoanele care nu au finalizat studiile gimnaziale.',
+        icon: 'tabler:book',
+        callToAction: { text: 'Află mai multe', href: '/proiecte/scoala-gimnaziala-christiana' },
       },
       {
-        title: 'Styled using Tailwind CSS',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+        title: '"Învață să reușești"',
+        description: 'Meditații gratuite și sprijin pentru elevii cu situație școlară problematică.',
+        icon: 'tabler:award',
+        callToAction: { text: 'Află mai multe', href: '/proiecte/invata-sa-reusesti' },
       },
       {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+        title: 'Burse Școlare',
+        description: 'Acordarea de burse pentru elevii din familii defavorizate.',
+        icon: 'tabler:certificate',
+        callToAction: { text: 'Află mai multe', href: '/proiecte/burse-scolare' },
+      },
+      {
+        title: 'Meditații Școlare',
+        description: 'Program de meditații gratuite pentru copiii din familii cu venituri mici.',
+        icon: 'tabler:pencil',
+        callToAction: { text: 'Află mai multe', href: '/proiecte/meditatii-scolare' },
+      },
+      {
+        title: 'Centrul Comunitar pentru Tineret',
+        description: 'Activități de petrecere a timpului liber menite să formeze și să dezvolte abilități sociale.',
+        icon: 'tabler:users-group',
+        callToAction: { text: 'Află mai multe', href: '/proiecte/centrul-comunitar-pentru-tineret' },
+      },
+      {
+        title: 'Cantina Socială "Sf. Arhidiacon Ștefan"',
+        description: 'Masă caldă zilnică pentru persoanele defavorizate socio-economic.',
+        icon: 'tabler:soup',
+        callToAction: { text: 'Află mai multe', href: '/proiecte/cantina-sociala' },
+      },
+      {
+        title: 'Pentru Viață',
+        description: 'Informare și consiliere pre și post-avort pentru femeile aflate în situații de criză.',
+        icon: 'tabler:heart-plus',
+        callToAction: { text: 'Află mai multe', href: '/proiecte/pentru-viata' },
+      },
+      {
+        title: 'Părinți și adolescenți',
+        description: 'Activități educative de dezvoltare și remediere pentru părinți și adolescenți.',
+        icon: 'tabler:friends',
+        callToAction: { text: 'Află mai multe', href: '/proiecte/parinti-si-adolescenti' },
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-[#eaf6ff] dark:bg-transparent"></div>
+    </Fragment>
+  </Features>
+
+  <!-- About Section -->
+  <Content
+    tagline="Despre noi"
+    title="Asociația Christiana Cluj"
+    items={[
+      {
+        title: 'Fondată în 1991',
+        description: 'Una dintre primele asociații înființate de Biserica Ortodoxă Română.',
+      },
+      {
+        title: 'Asistență medicală și socială',
+        description: 'Oferim servicii medicale, sociale și spirituale persoanelor excluse din sistemul public.',
+      },
+      {
+        title: 'Educație și formare',
+        description: 'Programe educaționale pentru copii și tineri din familii defavorizate.',
+      },
+      {
+        title: 'Comunitate și solidaritate',
+        description: 'Construim comunitatea prin slujire, voluntariat și solidaritate creștină.',
+      },
+    ]}
+    callToAction={{
+      text: 'Află mai multe despre noi',
+      href: '/despre-noi',
+      icon: 'tabler:arrow-right',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <h3 class="text-2xl font-bold tracking-tight sm:text-3xl mb-2">Construim comunitatea</h3>
+      Asociația CHRISTIANA activează în domeniul asistenței medicale, sociale și educaționale, oferind sprijin persoanelor
+      defavorizate din comunitatea clujeană.
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Get your dream website up and running in no time with AstroWind."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- HighlightedPosts Widget ******* -->
-
+  <!-- Blog / News Section -->
   <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  />
+    title="Noutăți"
+    linkText="Vezi toate noutățile"
+    count={3}
+    information="Ultimele noutăți și evenimente de la Asociația Christiana Cluj."
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-[#eaf6ff] dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
 
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
-    ]}
-  />
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  />
-
-  <!-- CallToAction Widget *********** -->
-
+  <!-- Final CTA -->
   <CallToAction
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
+        text: 'Donează',
+        href: '/sustine-ne',
+        icon: 'tabler:heart-filled',
+      },
+      {
+        text: 'Devino voluntar',
+        href: '/pagina-voluntarului',
+        icon: 'tabler:users',
       },
     ]}
   >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
+    <Fragment slot="title"> Implică-te! </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Fiecare gest de bunătate contează. Donează, devino voluntar sau ajută-ne să răspândim vestea!
     </Fragment>
   </CallToAction>
 </Layout>

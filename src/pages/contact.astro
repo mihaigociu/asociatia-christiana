@@ -1,79 +1,129 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-import ContactUs from '~/components/widgets/Contact.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 
-const metadata = {
-  title: 'Contact',
-};
+const metadata = { title: 'Contact' };
+
+const puncteDeLucru = [
+  {
+    name: 'Centrul de Servicii Sociale "Sf. Vasile cel Mare"',
+    address: 'Aleea Moldoveanu nr. 3, Cluj-Napoca',
+    phone: '0264-457552/3, 0733-070590',
+    email: 'secretariat@scoalachristiana.ro',
+    iban: 'RO68RNCB0106001668730010',
+    link: '/centre/css-sf-vasile',
+  },
+  {
+    name: 'Centrul de Asistenţă Medico-Socială "Sf. Pantelimon"',
+    address: 'Str. Ion Meşter nr. 10, Cluj-Napoca',
+    phone: '0264 421 038',
+    email: 'em_mavra@yahoo.com',
+    iban: 'RO09RNCB0106001668730005',
+    link: '/centre/poli-sf-pantelimon',
+  },
+  {
+    name: 'Centrul de Servicii Sociale "Acoperământul Maicii Domnului"',
+    address: 'Str. Ovidiu nr. 27, Cluj-Napoca',
+    phone: '0264 454 644',
+    email: 'contact@cssamd.org',
+    iban: 'RO79RNCB0106001668730006',
+    link: '/centre/css-amd',
+  },
+  {
+    name: 'Programul "Sf. Dimitrie Basarabov"',
+    address: 'Str. Ion Meşter nr. 10 / Str. Salcâmului nr. 20, Cluj-Napoca',
+    phone: '0755 683 330',
+    email: 'sfdimitrie@yahoo.com',
+    iban: 'RO57RNCB0106001668730014',
+    link: '/centre/progr-sf-dimitrie',
+  },
+  {
+    name: 'Grădiniţa Socială "Acoperământul Maicii Domnului", Turda',
+    address: 'Aleea Plopilor nr. 7, Turda, jud. Cluj',
+    phone: '0264 317 772',
+    email: 'nicoamd@yahoo.com',
+    iban: '',
+    link: '/centre/gradi-turda',
+  },
+  {
+    name: 'Centrul de Asistenţă şi Îngrijire "Sf. Nicolae"',
+    address: 'Str. Principală nr. 127, Mociu, jud. Cluj',
+    phone: '0264 235 566',
+    email: 'ciamociu@yahoo.com',
+    iban: '',
+    link: '/centre/cia-mociu',
+  },
+];
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
+  <HeroText tagline="Contactează-ne" title="Contact" />
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <section class="py-12 max-w-5xl mx-auto px-4">
+    <!-- Sediu social -->
+    <div class="bg-[#eaf6ff] dark:bg-gray-800 rounded-2xl p-8 mb-12 border-l-4 border-[#1d79b6]">
+      <h2 class="text-2xl font-bold text-[#003459] dark:text-white mb-4">Sediu social</h2>
+      <p class="text-lg font-semibold text-gray-800 dark:text-gray-200">
+        Asociaţia Filantropică Medical-Creştină CHRISTIANA - Filiala Cluj
+      </p>
+      <div class="mt-4 space-y-2 text-gray-700 dark:text-gray-300">
+        <p class="flex items-start gap-2">
+          <span class="text-[#1d79b6]">📍</span>
+          Piaţa Avram Iancu nr. 18, Cluj-Napoca
+        </p>
+        <p class="flex items-start gap-2">
+          <span class="text-[#1d79b6]">📞</span>
+          0264-431004 int. 227
+        </p>
+        <p class="flex items-start gap-2">
+          <span class="text-[#1d79b6]">✉️</span>
+          <a href="mailto:secretariat@christianacluj.ro" class="text-[#1d79b6] hover:underline">
+            secretariat@christianacluj.ro
+          </a>
+        </p>
+        <p class="flex items-start gap-2">
+          <span class="text-[#1d79b6]">🌐</span>
+          <a href="https://www.christianacluj.ro" class="text-[#1d79b6] hover:underline">www.christianacluj.ro</a>
+        </p>
+      </div>
+    </div>
 
-  <ContactUs
-    id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
-    inputs={[
+    <!-- Puncte de lucru -->
+    <h2 class="text-3xl font-bold text-[#003459] dark:text-white mb-8 text-center">Puncte de lucru</h2>
+    <div class="grid md:grid-cols-2 gap-6">
       {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-    ]}
-    textarea={{
-      label: 'Message',
-    }}
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-    }}
-    description="Our support team typically responds within 24 business hours."
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="We are here to help!"
-    items={[
-      {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Email',
-        description: 'contact@support.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
-      },
-    ]}
-  />
+        puncteDeLucru.map((punct) => (
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border-t-4 border-[#ed9f23] hover:shadow-lg transition-shadow">
+            <h3 class="text-lg font-bold text-[#003459] dark:text-white mb-3">
+              <a href={punct.link} class="hover:text-[#1d79b6] transition-colors">
+                {punct.name}
+              </a>
+            </h3>
+            <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <p class="flex items-start gap-2">
+                <span>📍</span>
+                {punct.address}
+              </p>
+              <p class="flex items-start gap-2">
+                <span>📞</span>
+                {punct.phone}
+              </p>
+              <p class="flex items-start gap-2">
+                <span>✉️</span>
+                <a href={`mailto:${punct.email}`} class="text-[#1d79b6] hover:underline">
+                  {punct.email}
+                </a>
+              </p>
+              {punct.iban && (
+                <p class="flex items-start gap-2">
+                  <span>🏦</span>
+                  <span class="font-mono text-xs">{punct.iban}</span>
+                </p>
+              )}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
 </Layout>

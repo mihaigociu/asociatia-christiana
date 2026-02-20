@@ -1,0 +1,77 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = { title: 'Viziune și Misiune' };
+---
+
+<Layout metadata={metadata}>
+  <HeroText tagline="Asociația Christiana" title="Viziune și Misiune" />
+
+  <section class="py-12 max-w-4xl mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Viziune -->
+      <div class="bg-[#eaf6ff] dark:bg-gray-800 rounded-2xl p-8 border-t-4 border-[#1d79b6]">
+        <h2 class="text-2xl font-bold text-[#003459] dark:text-white mb-4">Viziune</h2>
+        <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+          Viziunea AFMC CHRISTIANA – Filiala Cluj este de a construi o <strong>comunitate vie</strong> în spiritul valorilor
+          creştin-ortodoxe în care fiecare persoană să fie parte integrantă a acesteia.
+        </p>
+      </div>
+
+      <!-- Misiune -->
+      <div class="bg-[#eaf6ff] dark:bg-gray-800 rounded-2xl p-8 border-t-4 border-[#ed9f23]">
+        <h2 class="text-2xl font-bold text-[#003459] dark:text-white mb-4">Misiune</h2>
+        <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+          Misiunea AFMC CHRISTIANA – Filiala Cluj este de a susţine comunitatea în vederea dezvoltării de
+          <strong>proiecte sociale, educaţionale, medicale şi culturale</strong> care să răspundă nevoilor acestora.
+        </p>
+      </div>
+    </div>
+
+    <!-- Valori -->
+    <div class="mt-16 text-center">
+      <h2 class="text-3xl font-bold text-[#003459] dark:text-white mb-8">Valorile noastre</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="p-6 rounded-xl bg-white dark:bg-gray-800 shadow-md">
+          <div class="text-3xl mb-3">❤️</div>
+          <h3 class="font-bold text-[#003459] dark:text-white">Filantropie</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Iubire și grijă față de aproapele nostru</p>
+        </div>
+        <div class="p-6 rounded-xl bg-white dark:bg-gray-800 shadow-md">
+          <div class="text-3xl mb-3">✝️</div>
+          <h3 class="font-bold text-[#003459] dark:text-white">Credință</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Ancorați în valorile creștin-ortodoxe</p>
+        </div>
+        <div class="p-6 rounded-xl bg-white dark:bg-gray-800 shadow-md">
+          <div class="text-3xl mb-3">🤝</div>
+          <h3 class="font-bold text-[#003459] dark:text-white">Comunitate</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Împreună construim o lume mai bună</p>
+        </div>
+        <div class="p-6 rounded-xl bg-white dark:bg-gray-800 shadow-md">
+          <div class="text-3xl mb-3">📚</div>
+          <h3 class="font-bold text-[#003459] dark:text-white">Educație</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Investim în viitorul copiilor și tinerilor</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 max-w-4xl mx-auto px-4">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/sustine-ne"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#ed9f23] hover:bg-[#d48c1a] transition-colors"
+      >
+        🤝 Donează
+      </a>
+      <a
+        href="/pagina-voluntarului"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#1d79b6] hover:bg-[#003459] transition-colors"
+      >
+        💛 Devino voluntar
+      </a>
+    </div>
+  </section>
+</Layout>

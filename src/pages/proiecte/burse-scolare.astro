@@ -1,0 +1,70 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = { title: 'Burse şcolare' };
+---
+
+<Layout metadata={metadata}>
+  <HeroText tagline="Proiecte" title="Burse şcolare" subtitle="Susţinere materială şi educativă pentru elevi" />
+
+  <section class="py-12 max-w-4xl mx-auto px-4 prose prose-lg dark:prose-invert">
+    <p>
+      Proiectul se adresează şi elevilor care sunt înscrişi la o şcoală guvernamentală clasele I-XII şi care au nevoie
+      de susţinere materială şi educativă pentru a putea continua studiile. Pentru aceşti elevi, proiectul de burse
+      şcolare oferă rechizite, îmbrăcăminte, încălţăminte, pachet cu alimente de bază şi alte ajutoare materiale în
+      funcţie de nevoile fiecărui elev. Pe lângă aceste ajutoare materiale, aceşti elevi mai pot să beneficieze de
+      meditaţii şcolare gratuite, consiliere şi orientare, participarea la activităţi recreative şi tabără.
+    </p>
+    <p>
+      Scopul acestui proiect este susţinerea în vederea continuării studiilor şcolare a obţinerii de rezultate şcolare
+      crescute şi a evitării situaţiei de risc şcolar.
+    </p>
+
+    <h2>Obiective</h2>
+    <ul>
+      <li>Continuarea studiilor şi creşterea interesului elevilor pentru promovarea învăţământului obligatoriu</li>
+      <li>Îmbunătăţirea rezultatelor şcolare în rândul elevilor înscrişi în proiect</li>
+      <li>Creşterea gradului de implicare a părinţilor în educaţia copiilor lor</li>
+    </ul>
+
+    <h2>Activităţile proiectului</h2>
+    <ul>
+      <li>Educative: cursuri şi meditaţii şcolare</li>
+      <li>
+        Suport material: oferirea de rechizite, uniformă, echipament sportiv, îmbrăcăminte, încălţăminte, plata
+        transportului la şcoală, pachet cu alimente de bază şi altele
+      </li>
+      <li>Consiliere şi orientare pentru elevi şi părinţi</li>
+      <li>Activităţi recreative: excursii, tabere</li>
+      <li>Activităţi de îndrumare spirituală (la cererea elevilor şi a părinţilor acestora)</li>
+    </ul>
+
+    <h2>Beneficiari</h2>
+    <p>
+      Elevi din clasele I-XII care provin din familii cu risc social şi pentru care familia nu poate asigura resursele
+      materiale necesare pentru frecvenţa şcolară.
+    </p>
+
+    <h2>Rezultate</h2>
+    <p>Acordarea anuală a cel puţin <strong>18 burse şcolare</strong>.</p>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 max-w-4xl mx-auto px-4">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/sustine-ne"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#ed9f23] hover:bg-[#d48c1a] transition-colors"
+      >
+        🤝 Donează
+      </a>
+      <a
+        href="/pagina-voluntarului"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#1d79b6] hover:bg-[#003459] transition-colors"
+      >
+        💛 Devino voluntar
+      </a>
+    </div>
+  </section>
+</Layout>

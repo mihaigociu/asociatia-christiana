@@ -1,0 +1,156 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = { title: 'Pagina Voluntarului' };
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Implică-te"
+    title="Pagina Voluntarului"
+    subtitle="Buna desfăşurare a activităţilor proiectelor este asigurată de implicarea unei echipe operaţionale eficiente dar şi de implicarea unui mare număr de voluntari. Avem nevoie de tine pentru a fi competitivi şi eficienţi."
+  />
+
+  <section class="py-12 max-w-4xl mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-8 mb-16">
+      <!-- Drepturi -->
+      <div class="bg-[#eaf6ff] dark:bg-gray-800 rounded-2xl p-8">
+        <h2 class="text-2xl font-bold text-[#003459] dark:text-white mb-4">Voluntarii au dreptul:</h2>
+        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+          <li class="flex items-start gap-2">
+            <span class="text-[#1d79b6]">✓</span> La un loc unde să-şi desfăşoare activitatea şi uneltele necesare
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#1d79b6]">✓</span> La cunoaşterea scopului şi regulilor organizaţiei
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#1d79b6]">✓</span> La orientare şi formare specifică domeniului în care vor activa
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#1d79b6]">✓</span> Să fie trataţi în calitate de colegi
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#1d79b6]">✓</span> Să fie informaţi de schimbările din cadrul organizaţiei
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#1d79b6]">✓</span> Să propună sugestii şi să fie ascultaţi
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#1d79b6]">✓</span> Să li se recunoască contribuţia ca voluntari
+          </li>
+        </ul>
+      </div>
+
+      <!-- Responsabilitati -->
+      <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-md">
+        <h2 class="text-2xl font-bold text-[#003459] dark:text-white mb-4">Responsabilităţi:</h2>
+        <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+          <li class="flex items-start gap-2">
+            <span class="text-[#ed9f23]">★</span>
+            <strong>Fii sigur</strong> – analizează-ţi sentimentele şi asigură-te că vrei să ajuţi
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#ed9f23]">★</span>
+            <strong>Acceptă supervizare</strong> – vorbeşte cu cineva despre activitatea ta
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#ed9f23]">★</span>
+            <strong>Fii de încredere</strong> – fă ceea ce ai promis că vei face
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#ed9f23]">★</span>
+            <strong>Fii loial</strong> – vino cu sugestii dar acceptă regulile
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#ed9f23]">★</span>
+            <strong>Spune ce gândeşti</strong> – întreabă ceea ce nu ştii
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#ed9f23]">★</span>
+            <strong>Fii deschis la a învăţa</strong> – trainingul poate fi esenţial
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#ed9f23]">★</span>
+            <strong>Fii un bun coechipier</strong> – găseşte-ţi locul în echipă
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Cum sa devii voluntar -->
+    <div class="bg-[#003459] text-white rounded-2xl p-8 mb-16 text-center">
+      <h2 class="text-3xl font-bold mb-4">Cum să devii voluntar</h2>
+      <p class="text-lg text-[#eaf6ff] mb-6">
+        Trimite un mail la adresa
+        <a href="mailto:christianacluj@yahoo.com" class="text-[#ed9f23] hover:underline font-bold">
+          christianacluj@yahoo.com
+        </a>
+        care să conţină:
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center text-left max-w-md mx-auto">
+        <div class="bg-white/10 rounded-xl p-4 flex-1">
+          <p class="font-bold text-[#ed9f23]">📄 CV-ul tău</p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-4 flex-1">
+          <p class="font-bold text-[#ed9f23]">✍️ Scrisoare de intenţie</p>
+          <p class="text-sm text-gray-300 mt-1">"De ce ai vrea să fii voluntar în asociaţia noastră?"</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Activitati -->
+    <div class="mb-16">
+      <h2 class="text-3xl font-bold text-[#003459] dark:text-white mb-8 text-center">
+        Activităţi în care te poţi implica
+      </h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 text-center">
+          <span class="text-2xl">🧠</span>
+          <p class="font-semibold mt-2 text-gray-800 dark:text-gray-200">Consiliere psihologică</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 text-center">
+          <span class="text-2xl">📚</span>
+          <p class="font-semibold mt-2 text-gray-800 dark:text-gray-200">Meditaţii şcolare</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 text-center">
+          <span class="text-2xl">🎨</span>
+          <p class="font-semibold mt-2 text-gray-800 dark:text-gray-200">Activităţi recreative cu copii</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Avantaje -->
+    <div>
+      <h2 class="text-3xl font-bold text-[#003459] dark:text-white mb-8 text-center">Ce avantaje ai ca voluntar?</h2>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <div class="text-center">
+          <div class="text-4xl mb-3">📋</div>
+          <h3 class="font-bold text-[#003459] dark:text-white">Experiență și recomandare</h3>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-3">🎓</div>
+          <h3 class="font-bold text-[#003459] dark:text-white">Traininguri</h3>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-3">📝</div>
+          <h3 class="font-bold text-[#003459] dark:text-white">Valoare adăugată pentru CV</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction
+    title="Fii parte din echipa noastră!"
+    subtitle="Contactează-ne și devino voluntar Christiana."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Trimite email',
+        href: 'mailto:christianacluj@yahoo.com',
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
+</Layout>

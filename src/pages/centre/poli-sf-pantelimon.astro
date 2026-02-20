@@ -1,0 +1,142 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = { title: 'CAMS "Sf. Pantelimon"' };
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Centre"
+    title={'Centrul de Asistenţă Medico-Socială "Sf. Pantelimon"'}
+    subtitle="Cluj-Napoca · Din 1999"
+  />
+
+  <!-- Citat -->
+  <section class="py-6 max-w-4xl mx-auto px-4">
+    <blockquote
+      class="border-l-4 border-[#ed9f23] bg-[#eaf6ff] dark:bg-gray-800 rounded-r-xl px-6 py-4 italic text-lg text-[#003459] dark:text-gray-200"
+    >
+      „Medicul tratează, Dumnezeu vindecă"
+    </blockquote>
+  </section>
+
+  <section class="py-12 max-w-4xl mx-auto px-4 prose prose-lg dark:prose-invert">
+    <p>
+      Proiectul este înfiinţat în noiembrie <strong>1999</strong>, din iniţiativa vrednicului de pomenire IPS
+      Arhiepiscop şi Mitropolit Bartolomeu Anania şi cu sprijinul unor medici voluntari dornici să acorde asistenţă
+      medicală gratuită. Proiectul a fost iniţiat ca urmare a identificării nevoii de acordare de servicii medicale,
+      sociale şi spirituale pentru persoanele excluse din sistemul public de asistenţă, mai precis persoanele
+      defavorizate din punct de vedere socio-medical.
+    </p>
+
+    <img
+      src="/images/uploads/2013/04/IMG_0056.jpg"
+      alt="Centrul de Asistenţă Medico-Socială Sf. Pantelimon"
+      class="float-left mr-6 mb-4 rounded-xl shadow-md w-full sm:w-72"
+      loading="lazy"
+    />
+
+    <h2>Scop</h2>
+    <p>
+      Creşterea calităţii vieţii beneficiarilor prin îmbunătăţirea stării de sănătate fizică, psihologică şi spirituală
+      a categoriilor sociale defavorizate din punct de vedere socio-economic.
+    </p>
+
+    <h2>Obiective</h2>
+    <ul>
+      <li>Acordarea asistenţei medicale şi a tratamentului medicamentos</li>
+      <li>
+        Redobândirea şi menţinerea echilibrului psihologic şi social al persoanelor defavorizate prin asistenţă
+        psihologică şi socială
+      </li>
+      <li>Redobândirea şi menţinerea echilibrului moral şi spiritual al beneficiarilor prin asistenţă duhovnicească</li>
+    </ul>
+
+    <h2>Servicii oferite</h2>
+    <ul>
+      <li>Consultaţii medicale în ambulatoriu</li>
+      <li>Servicii de asistenţă socială şi ajutor material</li>
+      <li>Consiliere individuală</li>
+      <li>Activităţi de petrecere a timpului liber</li>
+      <li>Grupuri de suport</li>
+      <li>Servicii religioase şi spirituale</li>
+    </ul>
+
+    <div class="clear-both"></div>
+
+    <img
+      src="/images/uploads/2013/04/cabinet-poli.jpg"
+      alt="Cabinet Policlinica Sf. Pantelimon"
+      class="float-right ml-6 mb-4 rounded-xl shadow-md w-full sm:w-72"
+      loading="lazy"
+    />
+
+    <h2>Grup ţintă</h2>
+    <p>
+      Persoane defavorizate şi bolnave care nu au acces la servicii medicale şi care nu reuşesc să îşi procure
+      tratamentul medicamentos pentru bolile cronice de care suferă din cauza lipsei veniturilor şi a asigurării
+      medicale.
+    </p>
+
+    <div class="clear-both"></div>
+
+    <h2>Rezultate</h2>
+  </section>
+
+  <section class="py-4 max-w-4xl mx-auto px-4">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 not-prose">
+      <div class="bg-[#eaf6ff] dark:bg-gray-800 rounded-xl p-4 text-center">
+        <p class="text-3xl font-bold text-[#1d79b6]">46.333+</p>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">persoane beneficiare</p>
+      </div>
+      <div class="bg-[#eaf6ff] dark:bg-gray-800 rounded-xl p-4 text-center">
+        <p class="text-3xl font-bold text-[#1d79b6]">230</p>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">consultaţii/lună</p>
+      </div>
+      <div class="bg-[#eaf6ff] dark:bg-gray-800 rounded-xl p-4 text-center">
+        <p class="text-3xl font-bold text-[#1d79b6]">70</p>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">pachete alimentare/an</p>
+      </div>
+      <div class="bg-[#eaf6ff] dark:bg-gray-800 rounded-xl p-4 text-center">
+        <p class="text-3xl font-bold text-[#1d79b6]">43</p>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">beneficiari ecografie</p>
+      </div>
+      <div class="bg-[#eaf6ff] dark:bg-gray-800 rounded-xl p-4 text-center">
+        <p class="text-3xl font-bold text-[#1d79b6]">31</p>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">copii monitorizaţi</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact info -->
+  <section class="py-8 max-w-4xl mx-auto px-4">
+    <div class="bg-[#eaf6ff] dark:bg-gray-800 rounded-2xl p-6">
+      <h3 class="text-lg font-bold text-[#003459] dark:text-white mb-3">Date de contact</h3>
+      <div class="space-y-2 text-gray-700 dark:text-gray-300 text-sm">
+        <p>📍 Str. Ion Meşter nr. 10, Cluj-Napoca</p>
+        <p>📞 0264 421 038</p>
+        <p>✉️ <a href="mailto:em_mavra@yahoo.com" class="text-[#1d79b6] hover:underline">em_mavra@yahoo.com</a></p>
+        <p>🏦 IBAN: <span class="font-mono">RO09RNCB0106001668730005</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 max-w-4xl mx-auto px-4">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/sustine-ne"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#ed9f23] hover:bg-[#d48c1a] transition-colors"
+      >
+        🤝 Donează
+      </a>
+      <a
+        href="/pagina-voluntarului"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#1d79b6] hover:bg-[#003459] transition-colors"
+      >
+        💛 Devino voluntar
+      </a>
+    </div>
+  </section>
+</Layout>

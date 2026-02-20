@@ -1,0 +1,134 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = { title: 'CSS "Acoperământul Maicii Domnului"' };
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Centre"
+    title={'Centrul de Servicii Sociale "Acoperământul Maicii Domnului"'}
+    subtitle="Cluj-Napoca · Din 2001"
+  />
+
+  <!-- Citat din Isaia -->
+  <section class="py-6 max-w-4xl mx-auto px-4">
+    <blockquote
+      class="border-l-4 border-[#ed9f23] bg-[#eaf6ff] dark:bg-gray-800 rounded-r-xl px-6 py-4 italic text-lg text-[#003459] dark:text-gray-200"
+    >
+      „Nu te teme nimic, căci Eu te izbăvesc, te chem pe nume, eşti al Meu.<br />
+      Dacă vei trece prin ape, Eu voi fi cu tine; şi râurile nu te vor îneca;<br />
+      Dacă vei trece prin foc, nu te va arde, şi flacăra nu te va aprinde."
+      <footer class="mt-2 text-sm not-italic text-gray-600 dark:text-gray-400">— Isaia 43, 1-2</footer>
+    </blockquote>
+  </section>
+
+  <section class="py-12 max-w-4xl mx-auto px-4 prose prose-lg dark:prose-invert">
+    <p>
+      Dificultăţile mamelor în asumarea responsabilităţilor de creştere şi educare a copilului se datorează adesea unor
+      dificultăţi economice şi sociale (şomaj, marginalizare, lipsa unei locuinţe stabile, venituri reduse etc). O mare
+      parte din aceste mame trec prin crize familiale caracterizate de violenţe, carenţe educative, neglijenţe grave.
+      Fiecare element în parte, precum şi ansamblul acestor circumstanţe sunt în măsură să afecteze capacităţile
+      parentale. Se impune astfel necesitatea oferirii de sprijin de specialitate pentru prevenirea separării copilului
+      de familia sa naturală.
+    </p>
+    <p>
+      Astfel, în anul <strong>2001</strong>, se deschid porţile Centrului de Servicii Sociale "Acoperământul Maicii
+      Domnului" Cluj-Napoca unde mamele aflate în situaţii de criză pot apela.
+    </p>
+
+    <img
+      src="/images/uploads/2013/04/295625_612913888735545_1237284316_n.jpg"
+      alt="Centrul de Servicii Sociale Acoperământul Maicii Domnului"
+      class="rounded-xl shadow-md my-6 mx-auto"
+    />
+
+    <h2>Scop</h2>
+    <p>
+      Prevenirea abandonului în rândul copiilor cu vârsta cuprinsă între 0 și 6 ani din judeţul Cluj, dezvoltarea
+      competenţelor parentale şi asistarea familiei monoparentale în procesul de reintegrare socio-profesională.
+    </p>
+
+    <h2>Obiective</h2>
+    <ul>
+      <li>
+        Asigurarea, pe timpul zilei, a unor servicii de îngrijire pentru copiii aflaţi în risc de abandon, cu vârsta
+        cuprinsă între 0 și 6 ani
+      </li>
+      <li>
+        Educarea şi dezvoltarea relaţiei dintre părinţi şi copii, în vederea armonizării relaţiilor intrafamiliale
+      </li>
+      <li>Reintegrarea socio-profesională a familiilor monoparentale în comunitate</li>
+    </ul>
+
+    <img
+      src="/images/uploads/2013/04/574837_616281765065424_1519018836_n.jpg"
+      alt="Activități la Centrul Acoperământul Maicii Domnului"
+      class="rounded-xl shadow-md my-6 mx-auto"
+    />
+
+    <h2>Activităţi</h2>
+    <ul>
+      <li>
+        Centru de Zi (activităţi de îngrijire, educative, recreative, de socializare, monitorizarea stării de sănătate a
+        copiilor)
+      </li>
+      <li>
+        Servicii de integrare în sistemul educaţional de stat (creşe, grădiniţe) – sprijin financiar pentru taxele de
+        grădiniţă, monitorizarea integrării copilului şi a relaţiei familiei monoparentale cu instituţia de educaţie
+      </li>
+      <li>Acordarea lunară de pachete cu alimente şi produse de igienă</li>
+      <li>Asistare juridico-administrativă</li>
+      <li>Asistare pentru obţinerea prestaţiilor</li>
+      <li>Asistarea pentru găsirea sau păstrarea unei locuinţe</li>
+      <li>Susţinerea demersurilor de (re)integrare şcolară şi profesională</li>
+      <li>Consiliere vocaţională</li>
+      <li>Consiliere familială</li>
+    </ul>
+
+    <h2>Grup ţintă</h2>
+    <p>
+      Beneficiarii centrului sunt mame singure cu copii între 0–6 ani, lipsite de suportul familiei extinse, cu o
+      situaţie materială precară.
+    </p>
+    <p>
+      Pentru mai multe informaţii puteţi accesa pagina <a
+        href="http://www.ptfcro.org/"
+        target="_blank"
+        rel="noopener noreferrer">www.ptfcro.org</a
+      >.
+    </p>
+  </section>
+
+  <!-- Contact info -->
+  <section class="py-8 max-w-4xl mx-auto px-4">
+    <div class="bg-[#eaf6ff] dark:bg-gray-800 rounded-2xl p-6">
+      <h3 class="text-lg font-bold text-[#003459] dark:text-white mb-3">Date de contact</h3>
+      <div class="space-y-2 text-gray-700 dark:text-gray-300 text-sm">
+        <p>📍 Str. Ovidiu nr. 27, Cluj-Napoca</p>
+        <p>📞 0264 454 644</p>
+        <p>✉️ <a href="mailto:contact@cssamd.org" class="text-[#1d79b6] hover:underline">contact@cssamd.org</a></p>
+        <p>🏦 IBAN: <span class="font-mono">RO79RNCB0106001668730006</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 max-w-4xl mx-auto px-4">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/sustine-ne"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#ed9f23] hover:bg-[#d48c1a] transition-colors"
+      >
+        🤝 Donează
+      </a>
+      <a
+        href="/pagina-voluntarului"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#1d79b6] hover:bg-[#003459] transition-colors"
+      >
+        💛 Devino voluntar
+      </a>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,287 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = { title: 'Galerie foto' };
+
+const images = [
+  {
+    src: '/images/uploads/2013/06/IMG_3763.jpg',
+    thumb: '/images/uploads/2013/06/IMG_3763-300x200.jpg',
+    alt: 'Festivitatea de încheiere a anului școlar',
+  },
+  {
+    src: '/images/uploads/2013/06/IMG_3707.jpg',
+    thumb: '/images/uploads/2013/06/IMG_3707-300x200.jpg',
+    alt: 'Premiere elevi merituoși',
+  },
+  {
+    src: '/images/uploads/2013/06/HPIM7561.jpg',
+    thumb: '/images/uploads/2013/06/HPIM7561-300x219.jpg',
+    alt: 'Ziua internațională a copilului',
+  },
+  {
+    src: '/images/uploads/2013/05/DSC_7836.jpg',
+    thumb: '/images/uploads/2013/05/DSC_7836-300x199.jpg',
+    alt: 'Activitate la centru',
+  },
+  {
+    src: '/images/uploads/2013/06/HPIM7654.jpg',
+    thumb: '/images/uploads/2013/06/HPIM7654-300x219.jpg',
+    alt: 'Activități recreative',
+  },
+  {
+    src: '/images/uploads/2013/06/HPIM76541.jpg',
+    thumb: '/images/uploads/2013/06/HPIM76541-300x219.jpg',
+    alt: 'Ziua copilului la centru',
+  },
+  {
+    src: '/images/uploads/2013/06/DSC00574.jpg',
+    thumb: '/images/uploads/2013/06/DSC00574-300x225.jpg',
+    alt: 'Activități interactive cu copiii',
+  },
+  {
+    src: '/images/uploads/2013/05/patinoar-2-feb-2010-379.jpg',
+    thumb: '/images/uploads/2013/05/patinoar-2-feb-2010-379-300x225.jpg',
+    alt: 'Ieșire la patinoar',
+  },
+  {
+    src: '/images/uploads/2013/05/masa.jpg',
+    thumb: '/images/uploads/2013/05/masa-300x225.jpg',
+    alt: 'Cantina socială',
+  },
+  {
+    src: '/images/uploads/2013/05/HPIM2944.jpg',
+    thumb: '/images/uploads/2013/05/HPIM2944-300x225.jpg',
+    alt: 'Activități educative',
+  },
+  {
+    src: '/images/uploads/2013/05/Engleza.jpg',
+    thumb: '/images/uploads/2013/05/Engleza-300x225.jpg',
+    alt: 'Cursuri de limba engleză',
+  },
+  {
+    src: '/images/uploads/2013/05/HPIM3370.jpg',
+    thumb: '/images/uploads/2013/05/HPIM3370-300x225.jpg',
+    alt: 'Atelier de lucru',
+  },
+  {
+    src: '/images/uploads/2013/05/DSC01501.jpg',
+    thumb: '/images/uploads/2013/05/DSC01501-225x300.jpg',
+    alt: 'Activitate cu beneficiari',
+  },
+  {
+    src: '/images/uploads/2013/05/DSC02792.jpg',
+    thumb: '/images/uploads/2013/05/DSC02792-300x225.jpg',
+    alt: 'Eveniment Christiana',
+  },
+  {
+    src: '/images/uploads/2013/05/Pictura2.jpg',
+    thumb: '/images/uploads/2013/05/Pictura2-300x219.jpg',
+    alt: 'Atelier de pictură',
+  },
+  {
+    src: '/images/uploads/2013/05/Tabara4.jpg',
+    thumb: '/images/uploads/2013/05/Tabara4-300x225.jpg',
+    alt: 'Tabăra de vară',
+  },
+  {
+    src: '/images/uploads/2013/04/HPIM7414.jpg',
+    thumb: '/images/uploads/2013/04/HPIM7414-300x219.jpg',
+    alt: 'Voluntari la Christiana',
+  },
+  {
+    src: '/images/uploads/2013/04/HPIM7485.jpg',
+    thumb: '/images/uploads/2013/04/HPIM7485-300x219.jpg',
+    alt: 'Activitate voluntariat',
+  },
+  {
+    src: '/images/uploads/2013/04/Voluntari-21.jpg',
+    thumb: '/images/uploads/2013/04/Voluntari-21-300x225.jpg',
+    alt: 'Voluntari United Way',
+  },
+  {
+    src: '/images/uploads/2013/04/Mociu-3.jpg',
+    thumb: '/images/uploads/2013/04/Mociu-3-300x199.jpg',
+    alt: 'Centrul de la Mociu',
+  },
+  {
+    src: '/images/uploads/2013/04/00000215_large.jpg',
+    thumb: '/images/uploads/2013/04/00000215_large-300x224.jpg',
+    alt: 'Centrul Sf. Nicolae, Mociu',
+  },
+  {
+    src: '/images/uploads/2013/04/00000214_large.jpg',
+    thumb: '/images/uploads/2013/04/00000214_large-300x224.jpg',
+    alt: 'Centrul de Îngrijire Mociu',
+  },
+  {
+    src: '/images/uploads/2013/04/SAM_1994.jpg',
+    thumb: '/images/uploads/2013/04/SAM_1994-300x225.jpg',
+    alt: 'Activitate socială',
+  },
+  {
+    src: '/images/uploads/2013/04/PIC_0423.jpg',
+    thumb: '/images/uploads/2013/04/PIC_0423-300x225.jpg',
+    alt: 'Proiect educațional',
+  },
+  {
+    src: '/images/uploads/2013/04/SAM_2118.jpg',
+    thumb: '/images/uploads/2013/04/SAM_2118-300x225.jpg',
+    alt: 'Eveniment Christiana',
+  },
+  {
+    src: '/images/uploads/2013/04/cabinet-poli.jpg',
+    thumb: '/images/uploads/2013/04/cabinet-poli-300x225.jpg',
+    alt: 'Cabinet Policlinica Sf. Pantelimon',
+  },
+  {
+    src: '/images/uploads/2013/04/IMG_0063.jpg',
+    thumb: '/images/uploads/2013/04/IMG_0063-300x224.jpg',
+    alt: 'Policlinica Sf. Pantelimon',
+  },
+  {
+    src: '/images/uploads/2013/04/Grup-informare-Psihiatrie.jpg',
+    thumb: '/images/uploads/2013/04/Grup-informare-Psihiatrie-300x225.jpg',
+    alt: 'Grup de informare – Psihiatrie',
+  },
+  {
+    src: '/images/uploads/2013/03/IMG_0063.jpg',
+    thumb: '/images/uploads/2013/03/IMG_0063-300x224.jpg',
+    alt: 'Centru de zi',
+  },
+  {
+    src: '/images/uploads/2013/03/new-Thursday-class-10-2011.jpg',
+    thumb: '/images/uploads/2013/03/new-Thursday-class-10-2011-300x161.jpg',
+    alt: 'Cursuri de joi',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <HeroText tagline="Asociația Christiana" title="Galerie foto" />
+
+  <section class="py-12 max-w-6xl mx-auto px-4">
+    <p class="text-lg text-gray-700 dark:text-gray-300 text-center mb-10">
+      Imagini din activitățile și proiectele desfășurate de Asociația Filantropică Medical-Creștină Christiana – Filiala
+      Cluj.
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+      {
+        images.map((img) => (
+          <a
+            href={img.src}
+            class="gallery-item group block overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 bg-white dark:bg-gray-800"
+            data-alt={img.alt}
+          >
+            <img
+              src={img.thumb}
+              alt={img.alt}
+              class="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+    <button
+      id="lightbox-close"
+      class="absolute top-4 right-4 text-white text-4xl font-light hover:text-[#ed9f23] transition-colors z-10 leading-none"
+      aria-label="Închide"
+    >
+      &times;
+    </button>
+    <button
+      id="lightbox-prev"
+      class="absolute left-4 top-1/2 -translate-y-1/2 text-white text-5xl font-light hover:text-[#ed9f23] transition-colors z-10 leading-none"
+      aria-label="Imaginea anterioară"
+    >
+      &#8249;
+    </button>
+    <button
+      id="lightbox-next"
+      class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-5xl font-light hover:text-[#ed9f23] transition-colors z-10 leading-none"
+      aria-label="Imaginea următoare"
+    >
+      &#8250;
+    </button>
+    <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl" />
+    <p id="lightbox-caption" class="absolute bottom-6 left-0 right-0 text-center text-white text-sm drop-shadow-lg"></p>
+  </div>
+</Layout>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const items = document.querySelectorAll('.gallery-item');
+
+    if (!lightbox || !lightboxImg || !lightboxCaption || items.length === 0) return;
+
+    let currentIndex = 0;
+    const srcs: string[] = [];
+    const alts: string[] = [];
+
+    items.forEach((item, index) => {
+      const anchor = item as HTMLAnchorElement;
+      srcs.push(anchor.href);
+      alts.push(anchor.dataset.alt || '');
+
+      anchor.addEventListener('click', (e) => {
+        e.preventDefault();
+        currentIndex = index;
+        showImage();
+      });
+    });
+
+    function showImage() {
+      lightboxImg.src = srcs[currentIndex];
+      lightboxImg.alt = alts[currentIndex];
+      lightboxCaption!.textContent = alts[currentIndex];
+      lightbox!.classList.remove('hidden');
+      lightbox!.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox!.classList.add('hidden');
+      lightbox!.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('lightbox-close')?.addEventListener('click', closeLightbox);
+
+    document.getElementById('lightbox-prev')?.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + srcs.length) % srcs.length;
+      showImage();
+    });
+
+    document.getElementById('lightbox-next')?.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % srcs.length;
+      showImage();
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') {
+        currentIndex = (currentIndex - 1 + srcs.length) % srcs.length;
+        showImage();
+      }
+      if (e.key === 'ArrowRight') {
+        currentIndex = (currentIndex + 1) % srcs.length;
+        showImage();
+      }
+    });
+  });
+</script>

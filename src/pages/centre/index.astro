@@ -1,0 +1,110 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = { title: 'Centrele noastre' };
+
+const centre = [
+  {
+    name: 'Centrul de Servicii Sociale "Sf. Vasile cel Mare"',
+    description:
+      'Servicii specializate pentru prevenirea şi recuperarea din abandon şcolar. Proiecte sociale și educaționale din 1996.',
+    href: '/centre/css-sf-vasile',
+    icon: '🏫',
+    location: 'Cluj-Napoca',
+  },
+  {
+    name: 'Centrul de Asistenţă Medico-Socială "Sf. Pantelimon"',
+    description:
+      'Asistență medicală gratuită pentru persoanele defavorizate. Consultații, consiliere, servicii sociale din 1999.',
+    href: '/centre/poli-sf-pantelimon',
+    icon: '🏥',
+    location: 'Cluj-Napoca',
+  },
+  {
+    name: 'CSS "Acoperământul Maicii Domnului"',
+    description:
+      'Prevenirea abandonului copiilor 0–6 ani, dezvoltarea competențelor parentale și sprijin pentru familii monoparentale.',
+    href: '/centre/css-amd',
+    icon: '👶',
+    location: 'Cluj-Napoca',
+  },
+  {
+    name: 'Programul "Sf. Dimitrie Basarabov"',
+    description:
+      'Informare şi consiliere în adicţii. Servicii specializate pentru persoane dependente de alcool și alte droguri.',
+    href: '/centre/progr-sf-dimitrie',
+    icon: '🤲',
+    location: 'Cluj-Napoca',
+  },
+  {
+    name: 'Grădiniţa Socială "Acoperământul Maicii Domnului"',
+    description: 'Servicii educaţionale gratuite pentru copii din familii aflate în dificultate. 25 de copii, 3–6 ani.',
+    href: '/centre/gradi-turda',
+    icon: '🧒',
+    location: 'Turda',
+  },
+  {
+    name: 'Centrul de Îngrijire şi Asistenţă "Sf. Nicolae"',
+    description: 'Îngrijire şi asistenţă pentru persoane vârstnice aflate în situaţie de dependenţă socio-medicală.',
+    href: '/centre/cia-mociu',
+    icon: '🏠',
+    location: 'Mociu',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Centre"
+    title="Centrele noastre"
+    subtitle="Asociația Christiana operează 6 centre în județul Cluj, oferind servicii sociale, medicale și educaționale comunității."
+  />
+
+  <section class="py-12 max-w-5xl mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-8">
+      {
+        centre.map((centru) => (
+          <a
+            href={centru.href}
+            class="group block bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-l-4 border-[#1d79b6]"
+          >
+            <div class="p-6">
+              <div class="flex items-start gap-4">
+                <span class="text-4xl flex-shrink-0">{centru.icon}</span>
+                <div>
+                  <span class="text-xs font-bold text-[#1d79b6] uppercase tracking-wide">📍 {centru.location}</span>
+                  <h3 class="text-xl font-bold text-[#003459] dark:text-white mt-1 group-hover:text-[#1d79b6] transition-colors">
+                    {centru.name}
+                  </h3>
+                  <p class="text-gray-600 dark:text-gray-400 mt-2">{centru.description}</p>
+                  <span class="inline-block mt-3 text-[#1d79b6] font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                    Află mai multe →
+                  </span>
+                </div>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 max-w-4xl mx-auto px-4">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/sustine-ne"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#ed9f23] hover:bg-[#d48c1a] transition-colors"
+      >
+        🤝 Donează
+      </a>
+      <a
+        href="/pagina-voluntarului"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#1d79b6] hover:bg-[#003459] transition-colors"
+      >
+        💛 Devino voluntar
+      </a>
+    </div>
+  </section>
+</Layout>

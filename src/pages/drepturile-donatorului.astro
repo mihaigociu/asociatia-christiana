@@ -1,0 +1,76 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = { title: 'Drepturile Donatorului' };
+
+const drepturi = [
+  'De a fi informaţi în legătură cu misiunea organizaţiei, cu modul în care aceasta intenţionează să utilizeze donaţiile şi de a li se aduce la cunoştinţă capacitatea organizaţiei de a folosi donaţiile în mod eficient pentru scopurile cărora le-au fost destinate.',
+  'De a fi informaţi cu privire la identitatea persoanelor care fac parte din Consiliul de Conducere al organizaţiei şi de a se aştepta ca acest Consiliu să dea dovadă de prudenţă în îndeplinirea responsabilităţilor de conducere.',
+  'De a avea acces la cel mai recent Raport Financiar al organizaţiei.',
+  'De a fi asiguraţi că donaţiile lor vor fi folosite în scopurile pentru care au fost făcute.',
+  'De a primi recunoaşterea şi consideraţia potrivită gestului lor.',
+  'De a fi asiguraţi că informaţiile cu privire la donaţiile lor sunt tratate cu respect şi cu confidenţialitate, în condiţiile prevăzute de lege.',
+  'De a se aştepta ca toate contactele pe care le iniţiază cu reprezentanţii organizaţiilor de interes pentru ei să fie tratate cu profesionalism.',
+  'De a fi informaţi dacă persoana care contactează posibilii donatori este voluntarul organizaţiei solicitante, angajat al acesteia sau o altă persoană mandatată în acest scop de către organizaţie.',
+  'De a avea posibilitatea să refuze distribuirea datelor sale personale de către organizaţie către un terţ (persoană fizică sau juridică).',
+  'De a adresa orice întrebări în legătură cu organizaţia atunci când face o donaţie şi de a primi răspunsuri prompte, sincere şi deschise.',
+];
+---
+
+<Layout metadata={metadata}>
+  <HeroText tagline="Transparență" title="Drepturile Donatorului" />
+
+  <section class="py-12 max-w-4xl mx-auto px-4">
+    <div class="bg-[#eaf6ff] dark:bg-gray-800 rounded-2xl p-8 mb-12">
+      <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+        Filantropia este bazată pe acţiuni voluntare destinate binelui comun. Într-o viaţă de succes, a dărui şi a
+        împărţi cu alţii sunt valori de prim rang.
+      </p>
+      <p class="text-gray-600 dark:text-gray-400 mt-4">
+        Pentru a ne asigura că filantropia merită respectul şi încrederea acordată de publicul larg, că donatorii
+        actuali şi cei potenţiali pot avea încredere deplină în organizaţiile nonprofit şi în cauzele pe care au fost
+        solicitaţi să le sprijine, noi recomandăm puternic ca organizaţiile să respecte următoarele drepturi ale
+        donatorilor:
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      {
+        drepturi.map((drept, index) => (
+          <div class="flex items-start gap-4 bg-white dark:bg-gray-800 rounded-xl p-5 shadow-sm">
+            <div class="flex-shrink-0 w-10 h-10 bg-[#1d79b6] text-white rounded-full flex items-center justify-center font-bold text-sm">
+              {index + 1}
+            </div>
+            <p class="text-gray-700 dark:text-gray-300">{drept}</p>
+          </div>
+        ))
+      }
+    </div>
+
+    <p class="text-sm text-gray-500 dark:text-gray-400 mt-8 text-center">
+      Sursa:
+      <a href="https://www.afpnet.org" target="_blank" rel="noopener noreferrer" class="text-[#1d79b6] hover:underline">
+        www.afpnet.org
+      </a>
+    </p>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 max-w-4xl mx-auto px-4">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/sustine-ne"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#ed9f23] hover:bg-[#d48c1a] transition-colors"
+      >
+        🤝 Donează
+      </a>
+      <a
+        href="/pagina-voluntarului"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#1d79b6] hover:bg-[#003459] transition-colors"
+      >
+        💛 Devino voluntar
+      </a>
+    </div>
+  </section>
+</Layout>

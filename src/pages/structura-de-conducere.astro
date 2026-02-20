@@ -1,0 +1,91 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = { title: 'Structura de Conducere' };
+---
+
+<Layout metadata={metadata}>
+  <HeroText tagline="Organizare" title="Structura de Conducere" />
+
+  <section class="py-12 max-w-4xl mx-auto px-4 prose prose-lg dark:prose-invert">
+    <p>Adunarea generală reprezintă entitatea supremă de conducere alcătuită din 11 membri fondatori.</p>
+
+    <h2>Preşedinte de onoare</h2>
+    <p>
+      IPS Andrei Andreicuţ, Arhiepiscopul Vadului, Feleacului şi Clujului şi Mitropolit al Clujului, Maramureşului şi
+      Sălajului
+    </p>
+
+    <h2>Preşedinte</h2>
+    <p>Dr. Monica Colan</p>
+
+    <h2>Membrii Consiliului Director</h2>
+    <ul>
+      <li>
+        <strong>P.S. Vasile Someşanul</strong>, Episcop Vicar al Arhiepiscopiei Vadului, Feleacului şi Clujului
+      </li>
+      <li>
+        <strong>Mircea Bârsan</strong>, Preşedinte al Colegiului Medicilor din Cluj-Napoca, Profesor Doctor la
+        Universitatea de Medicină şi Farmacie "Iuliu Haţeganu" Cluj-Napoca
+      </li>
+      <li>
+        <strong>Vasile Popiţă</strong>, Conferenţiar Doctor al Universităţii de Medicină şi Farmacie "Iuliu Haţieganu"
+        Cluj-Napoca, Medic Primar în Radiologie şi Imagistică Medicală
+      </li>
+      <li><strong>Secretar:</strong> Adela Timar</li>
+    </ul>
+
+    <h2>Echipa operaţională</h2>
+    <ul>
+      <li><strong>Liciniu Câmpean</strong> – Reprezentant legal</li>
+      <li><strong>Mircea Păvălucă</strong> – Responsabil financiar</li>
+      <li>
+        <strong>Pr. Claudiu Precup</strong> – coordonator
+        <a href="/centre/css-sf-vasile">CSS "Sf. Vasile cel Mare"</a> Cluj-Napoca
+      </li>
+      <li>
+        <strong>Mavra Mirela Epure</strong> – coordonator
+        <a href="/centre/poli-sf-pantelimon">CAMS "Sf. Pantelimon"</a> Cluj-Napoca
+      </li>
+      <li>
+        <strong>Ancuţa Frantz</strong> – coordonator
+        <a href="/centre/css-amd">CSS "Acoperământul Maicii Domnului"</a> Cluj-Napoca
+      </li>
+      <li>
+        <strong>Floyd Frantz</strong> – coordonator
+        <a href="/centre/progr-sf-dimitrie">Programul "Sf. Dimitrie Basarabov"</a> Cluj-Napoca
+      </li>
+      <li>
+        <strong>Pr. Vasile Ştiopei</strong> – coordonator
+        <a href="/centre/gradi-turda">Grădiniţa Socială</a> Turda
+      </li>
+      <li>
+        <strong>Pr. Iustin Câmpean</strong> – coordonator
+        <a href="/centre/cia-mociu">CIA "Sf. Nicolae"</a> Mociu
+      </li>
+      <li>
+        <strong>Dr. Christa Todea-Gross</strong> – coordonator
+        <a href="/proiecte/pentru-viata">Proiect "Pentru Viaţă"</a> Cluj-Napoca
+      </li>
+    </ul>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 max-w-4xl mx-auto px-4">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/sustine-ne"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#ed9f23] hover:bg-[#d48c1a] transition-colors"
+      >
+        🤝 Donează
+      </a>
+      <a
+        href="/pagina-voluntarului"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#1d79b6] hover:bg-[#003459] transition-colors"
+      >
+        💛 Devino voluntar
+      </a>
+    </div>
+  </section>
+</Layout>

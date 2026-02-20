@@ -1,0 +1,130 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = { title: 'Modalități de susținere' };
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Susține-ne"
+    title="Modalități de susținere"
+    subtitle="Ajută-ne în misiunea noastră contribuind cu o sumă de bani la alegerea ta. Donaţiile vor contribui la desfăşurarea activităţilor organizate de asociaţie."
+  />
+
+  <section class="py-12 max-w-4xl mx-auto px-4">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+      <!-- Donatie online -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center border-t-4 border-[#1d79b6]">
+        <div class="text-4xl mb-4">💳</div>
+        <h3 class="text-xl font-bold text-[#003459] dark:text-white mb-3">Donație online</h3>
+        <p class="text-gray-600 dark:text-gray-400 mb-4">
+          Donează rapid și sigur prin PayPal folosind card bancar sau cont PayPal.
+        </p>
+        <a
+          href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M9LC7KFBYFGKC"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block rounded-full px-6 py-2 text-white font-bold bg-[#1d79b6] hover:bg-[#003459] transition-colors text-sm"
+        >
+          Donează prin PayPal
+        </a>
+      </div>
+
+      <!-- Transfer bancar -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center border-t-4 border-[#ed9f23]">
+        <div class="text-4xl mb-4">🏦</div>
+        <h3 class="text-xl font-bold text-[#003459] dark:text-white mb-3">Transfer bancar</h3>
+        <p class="text-gray-600 dark:text-gray-400 mb-4">
+          Poți face un transfer direct în conturile bancare ale centrelor noastre.
+        </p>
+        <a
+          href="/sustine-ne"
+          class="inline-block rounded-full px-6 py-2 text-white font-bold bg-[#ed9f23] hover:bg-[#d48c1a] transition-colors text-sm"
+        >
+          Vezi conturile
+        </a>
+      </div>
+
+      <!-- Voluntariat -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center border-t-4 border-[#003459]">
+        <div class="text-4xl mb-4">💛</div>
+        <h3 class="text-xl font-bold text-[#003459] dark:text-white mb-3">Voluntariat</h3>
+        <p class="text-gray-600 dark:text-gray-400 mb-4">
+          Implică-te direct în activitățile noastre și fă diferența în comunitate.
+        </p>
+        <a
+          href="/pagina-voluntarului"
+          class="inline-block rounded-full px-6 py-2 text-white font-bold bg-[#003459] hover:bg-[#141115] transition-colors text-sm"
+        >
+          Devino voluntar
+        </a>
+      </div>
+
+      <!-- Sponsorizare -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center border-t-4 border-[#1d79b6]">
+        <div class="text-4xl mb-4">🤝</div>
+        <h3 class="text-xl font-bold text-[#003459] dark:text-white mb-3">Sponsorizare</h3>
+        <p class="text-gray-600 dark:text-gray-400 mb-4">
+          Companiile pot sprijini activitățile asociației prin contracte de sponsorizare.
+        </p>
+        <a
+          href="/contact"
+          class="inline-block rounded-full px-6 py-2 text-white font-bold bg-[#1d79b6] hover:bg-[#003459] transition-colors text-sm"
+        >
+          Contactează-ne
+        </a>
+      </div>
+
+      <!-- Donatii in natura -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center border-t-4 border-[#ed9f23]">
+        <div class="text-4xl mb-4">📦</div>
+        <h3 class="text-xl font-bold text-[#003459] dark:text-white mb-3">Donații în natură</h3>
+        <p class="text-gray-600 dark:text-gray-400 mb-4">
+          Alimente, îmbrăcăminte, rechizite, medicamente și alte bunuri materiale.
+        </p>
+        <a
+          href="/contact"
+          class="inline-block rounded-full px-6 py-2 text-white font-bold bg-[#ed9f23] hover:bg-[#d48c1a] transition-colors text-sm"
+        >
+          Contactează-ne
+        </a>
+      </div>
+
+      <!-- Redirectioneaza 3.5% -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 text-center border-t-4 border-[#003459]">
+        <div class="text-4xl mb-4">📊</div>
+        <h3 class="text-xl font-bold text-[#003459] dark:text-white mb-3">Redirecționează 3,5%</h3>
+        <p class="text-gray-600 dark:text-gray-400 mb-4">
+          Redirecționează 3,5% din impozitul pe venit către asociația noastră.
+        </p>
+        <a
+          href="/contact"
+          class="inline-block rounded-full px-6 py-2 text-white font-bold bg-[#003459] hover:bg-[#141115] transition-colors text-sm"
+        >
+          Află mai multe
+        </a>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href="/drepturile-donatorului" class="text-[#1d79b6] hover:underline font-semibold">
+        Află mai multe despre drepturile donatorului →
+      </a>
+    </div>
+  </section>
+
+  <CallToAction
+    title="Fiecare contribuție contează!"
+    subtitle="Ajută-ne să continuăm misiunea noastră în comunitate."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Donează acum',
+        href: '/sustine-ne',
+        icon: 'tabler:heart',
+      },
+    ]}
+  />
+</Layout>

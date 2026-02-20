@@ -1,0 +1,102 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = { title: '„Învaţă să reuşeşti"' };
+---
+
+<Layout metadata={metadata}>
+  <HeroText tagline="Proiecte" title={'„Învaţă să reuşeşti"'} subtitle="Proiect pentru prevenirea abandonului şcolar" />
+
+  <section class="py-12 max-w-4xl mx-auto px-4 prose prose-lg dark:prose-invert">
+    <p>
+      Proiectul se adresează elevilor cu o situaţie şcolară problematică, fiind în pragul corigenţei sau a repetenţiei.
+      Aceşti elevi ajung în această situaţie în principal datorită mediului familial (familii monoparentale,
+      dezavantajate social, situaţii de boală, etc).
+    </p>
+    <p>
+      Înscrişi în proiectul „Învaţă să reuşeşti", elevii beneficiază gratuit de meditaţii şcolare, activităţi
+      recreativ-educative şi sportive, consiliere şi orientare şcolară, sprijin material, tabere, excursii, etc.
+      Părinţii acestor elevi pot beneficia de sprijin şi îndrumare pentru rezolvarea diverselor probleme.
+    </p>
+    <p>
+      Complementar, atunci când situaţia o impune, elevii beneficiază şi de alte tipuri de sprijin: înscrierea la un
+      medic de familie, întocmirea dosarului pentru obţinerea cărţii de identitate, facilitarea accesului la un loc de
+      muncă pentru părinţi, consilierea în vederea alegerii carierei, medierea conflictelor cu familia sau alte
+      persoane, etc.
+    </p>
+
+    <div class="float-right ml-6 mb-4 max-w-xs not-prose">
+      <img
+        src="/images/uploads/2013/05/HPIM2944-1024x768.jpg"
+        alt="Activități educative"
+        class="rounded-lg shadow-md"
+      />
+    </div>
+
+    <h2>Obiective</h2>
+    <p>Susţinerea elevilor pentru:</p>
+    <ul>
+      <li>Continuarea studiilor (absolvirea primelor 8 clase)</li>
+      <li>Recuperarea cunoştinţelor şi competenţelor şcolare</li>
+      <li>Consilierea, asistarea şi îndrumarea psihologică, şcolară şi profesională</li>
+      <li>Creşterea gradului de implicare a părinţilor</li>
+    </ul>
+
+    <div class="float-right ml-6 mb-4 max-w-xs not-prose clear-right">
+      <img src="/images/uploads/2013/05/masa-1024x768.jpg" alt="Masă copii" class="rounded-lg shadow-md" />
+    </div>
+
+    <h2>Activităţile proiectului</h2>
+    <ul>
+      <li>Educative (cursuri şi meditaţii şcolare)</li>
+      <li>Consiliere individuală şi de grup</li>
+      <li>Suport material</li>
+      <li>Îndrumare spirituală (la cerere)</li>
+      <li>„Şcoala Părinţilor"</li>
+      <li>Educativ-recreative: excursii, tabere, etc.</li>
+    </ul>
+
+    <div class="clear-both my-8 not-prose">
+      <img src="/images/uploads/2013/03/scriere3.jpg" alt="Scriere" class="rounded-lg shadow-md mx-auto max-w-md" />
+    </div>
+
+    <h2>Grupul ţintă</h2>
+    <p>Elevi ai claselor I-VIII, în special cei care nu pot fi susţinuţi de părinţi.</p>
+
+    <div class="float-right ml-6 mb-4 max-w-xs not-prose">
+      <img
+        src="/images/uploads/2013/05/patinoar-2-feb-2010-379-1024x768.jpg"
+        alt="Activități recreative"
+        class="rounded-lg shadow-md"
+      />
+    </div>
+
+    <h2>Modalităţi de susţinere</h2>
+    <ul>
+      <li>Voluntariat</li>
+      <li>Sponsorizări, donaţii, <strong>2%</strong>, etc.</li>
+      <li>Contribuţii în natură: alimente, rechizite, etc.</li>
+      <li>Promovarea proiectului în comunitate</li>
+      <li>Sprijin în vederea renovării şi dotării clădirii şi a curţii</li>
+    </ul>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 max-w-4xl mx-auto px-4">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/sustine-ne"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#ed9f23] hover:bg-[#d48c1a] transition-colors"
+      >
+        🤝 Donează
+      </a>
+      <a
+        href="/pagina-voluntarului"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#1d79b6] hover:bg-[#003459] transition-colors"
+      >
+        💛 Devino voluntar
+      </a>
+    </div>
+  </section>
+</Layout>

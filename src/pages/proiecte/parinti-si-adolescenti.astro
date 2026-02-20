@@ -1,0 +1,106 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = { title: '„Părinți și adolescenți"' };
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Proiecte"
+    title={'„Părinți și adolescenți"'}
+    subtitle="Activități educative de dezvoltare și remediere"
+  />
+
+  <section class="py-12 max-w-4xl mx-auto px-4 prose prose-lg dark:prose-invert">
+    <p>
+      Prin proiectul „Părinți și adolescenți" derulăm activități educative de dezvoltare și de remediere. Activitățile
+      sunt adresate atât persoanelor cât și grupurilor de persoane.
+    </p>
+
+    <p>Proiectul se adresează:</p>
+    <ol>
+      <li>Părinților care vor să-și dezvolte activitățile parentale sau să-și remedieze anumite aspecte parentale.</li>
+      <li>
+        Adolescenților care vor să participe la activități de dezvoltare personală sau care vor să-și remedieze anumite
+        probleme.
+      </li>
+    </ol>
+
+    <p>
+      De asemenea prin acest proiect urmărim să realizăm diferite evenimente publice de informare și conștientizare cu
+      privire la anumite teme educative.
+    </p>
+
+    <div class="float-right ml-6 mb-4 max-w-xs not-prose">
+      <img
+        src="/images/uploads/2013/05/HPIM2944-1024x768.jpg"
+        alt="Activități educative"
+        class="rounded-lg shadow-md"
+      />
+    </div>
+
+    <h2>Obiective</h2>
+    <ul>
+      <li>Realizarea de activități și cursuri pentru dezvoltare și remediere parentală.</li>
+      <li>Realizarea de activități și cursuri pentru dezvoltare și remediere personală (în special adolescenți).</li>
+      <li>Realizarea de prezentări educative informative.</li>
+    </ul>
+
+    <div class="float-right ml-6 mb-4 max-w-xs not-prose clear-right">
+      <img src="/images/uploads/2013/05/masa-1024x768.jpg" alt="Activități de grup" class="rounded-lg shadow-md" />
+    </div>
+
+    <h2>Activitățile proiectului</h2>
+    <ul>
+      <li>Cursuri pentru părinți pentru dezvoltare familială și de remediere.</li>
+      <li>Cursuri pentru adolescenți pentru dezvoltare personală și de remediere.</li>
+      <li>Consiliere și îndrumare.</li>
+      <li>Realizarea de evenimente educative.</li>
+      <li>Realizarea de materiale de promovare educativă și informare.</li>
+    </ul>
+
+    <div class="clear-both my-8 not-prose">
+      <img src="/images/uploads/2013/03/scriere3.jpg" alt="Scriere" class="rounded-lg shadow-md mx-auto max-w-md" />
+    </div>
+
+    <h2>Grupul țintă</h2>
+    <ul>
+      <li>Părinți.</li>
+      <li>Adolescenți.</li>
+    </ul>
+
+    <div class="float-right ml-6 mb-4 max-w-xs not-prose">
+      <img
+        src="/images/uploads/2013/05/patinoar-2-feb-2010-379-1024x768.jpg"
+        alt="Activități recreative"
+        class="rounded-lg shadow-md"
+      />
+    </div>
+
+    <h2>Modalități de susținere</h2>
+    <ul>
+      <li>Voluntariat</li>
+      <li>Sponsorizări, donații, <strong>2%</strong>, etc.</li>
+      <li>Promovarea proiectului în comunitate.</li>
+    </ul>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 max-w-4xl mx-auto px-4">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/sustine-ne"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#ed9f23] hover:bg-[#d48c1a] transition-colors"
+      >
+        🤝 Donează
+      </a>
+      <a
+        href="/pagina-voluntarului"
+        class="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-white font-bold bg-[#1d79b6] hover:bg-[#003459] transition-colors"
+      >
+        💛 Devino voluntar
+      </a>
+    </div>
+  </section>
+</Layout>
