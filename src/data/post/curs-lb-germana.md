@@ -1,9 +1,9 @@
 ---
 publishDate: 2023-06-18T00:00:00Z
-title: 'Curs de limba germană'
-slug: curs-lb-germana
-excerpt: 'Școala Gimnazială Christiana organizează curs de limba germană.'
+title: 'A Doua Șansă'
+slug: a-doua-sansa-afis
+excerpt: 'Program A Doua Șansă la Școala Gimnazială Christiana.'
 category: noutati
 ---
 
-![Afiș curs limba germană](/images/uploads/2021/02/afis-a3-scoala-gimn-christiana-red.jpg)
+![Afiș program A Doua Șansă](/images/uploads/2021/02/afis-a3-scoala-gimn-christiana-red.jpg)
