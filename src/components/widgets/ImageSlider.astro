@@ -1,0 +1,243 @@
+---
+export interface Slide {
+  image: string;
+  alt: string;
+  title: string;
+  description?: string;
+  href?: string;
+  linkText?: string;
+}
+
+interface Props {
+  slides: Slide[];
+  autoPlayInterval?: number; // milliseconds, default 5000
+  id?: string;
+}
+
+const { slides, autoPlayInterval = 5000, id = 'image-slider' } = Astro.props;
+---
+
+<section id={id} class="relative w-full overflow-hidden bg-[#003459]" style={`--slide-count: ${slides.length}`}>
+  <!-- Slides -->
+  <div
+    class="slider-track flex transition-transform duration-700 ease-in-out"
+    data-slider-track
+    data-interval={autoPlayInterval}
+  >
+    {
+      slides.map((slide, i) => (
+        <div class="slider-slide relative flex-shrink-0 w-full" aria-hidden={i !== 0 ? 'true' : 'false'} data-index={i}>
+          <div class="relative h-[420px] md:h-[520px]">
+            <img
+              src={slide.image}
+              alt={slide.alt}
+              class="absolute inset-0 w-full h-full object-cover"
+              loading={i === 0 ? 'eager' : 'lazy'}
+            />
+            <div class="absolute inset-0 bg-gradient-to-r from-[#003459]/85 via-[#003459]/50 to-transparent" />
+            <div class="relative h-full flex items-center">
+              <div class="max-w-6xl mx-auto px-6 sm:px-8 w-full">
+                <div class="max-w-xl">
+                  <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight drop-shadow">
+                    {slide.title}
+                  </h2>
+                  {slide.description && (
+                    <p class="mt-4 text-base md:text-lg text-white/85 leading-relaxed drop-shadow">
+                      {slide.description}
+                    </p>
+                  )}
+                  {slide.href && (
+                    <a
+                      href={slide.href}
+                      class="inline-flex items-center gap-2 mt-6 bg-[#ed9f23] hover:bg-[#f5b340] text-white font-semibold px-6 py-3 rounded transition-colors duration-200"
+                    >
+                      {slide.linkText ?? 'Află mai multe'}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="w-4 h-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  <!-- Prev button -->
+  <button
+    class="slider-prev absolute left-3 md:left-5 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/20 hover:bg-white/40 text-white transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-white"
+    aria-label="Slide anterior"
+    data-slider-prev
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-5 h-5"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.5"
+    >
+      <path d="M15 18l-6-6 6-6"></path>
+    </svg>
+  </button>
+
+  <!-- Next button -->
+  <button
+    class="slider-next absolute right-3 md:right-5 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/20 hover:bg-white/40 text-white transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-white"
+    aria-label="Slide următor"
+    data-slider-next
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-5 h-5"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.5"
+    >
+      <path d="M9 18l6-6-6-6"></path>
+    </svg>
+  </button>
+
+  <!-- Dot indicators -->
+  <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2" data-slider-dots>
+    {
+      slides.map((_, i) => (
+        <button
+          class={`slider-dot w-2.5 h-2.5 rounded-full transition-all duration-300 focus-visible:outline-2 focus-visible:outline-white ${i === 0 ? 'bg-[#ed9f23] w-6' : 'bg-white/50 hover:bg-white/75'}`}
+          aria-label={`Slide ${i + 1}`}
+          data-slider-dot={i}
+        />
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  function initSlider(section: HTMLElement) {
+    const track = section.querySelector<HTMLElement>('[data-slider-track]');
+    const prevBtn = section.querySelector<HTMLButtonElement>('[data-slider-prev]');
+    const nextBtn = section.querySelector<HTMLButtonElement>('[data-slider-next]');
+    const dots = section.querySelectorAll<HTMLButtonElement>('[data-slider-dot]');
+    const slides = section.querySelectorAll<HTMLElement>('[data-index]');
+
+    if (!track || slides.length === 0) return;
+
+    const interval = parseInt(track.dataset.interval ?? '5000', 10);
+    let current = 0;
+    let timer: ReturnType<typeof setInterval> | null = null;
+
+    function goTo(index: number) {
+      const total = slides.length;
+      current = ((index % total) + total) % total;
+
+      track!.style.transform = `translateX(-${current * 100}%)`;
+
+      slides.forEach((slide, i) => {
+        slide.setAttribute('aria-hidden', i === current ? 'false' : 'true');
+      });
+
+      dots.forEach((dot, i) => {
+        if (i === current) {
+          dot.classList.remove('bg-white/50', 'hover:bg-white/75', 'w-2.5');
+          dot.classList.add('bg-[#ed9f23]', 'w-6');
+        } else {
+          dot.classList.remove('bg-[#ed9f23]', 'w-6');
+          dot.classList.add('bg-white/50', 'hover:bg-white/75', 'w-2.5');
+        }
+      });
+    }
+
+    function startAuto() {
+      timer = setInterval(() => goTo(current + 1), interval);
+    }
+
+    function stopAuto() {
+      if (timer) clearInterval(timer);
+      timer = null;
+    }
+
+    prevBtn?.addEventListener('click', () => {
+      stopAuto();
+      goTo(current - 1);
+      startAuto();
+    });
+    nextBtn?.addEventListener('click', () => {
+      stopAuto();
+      goTo(current + 1);
+      startAuto();
+    });
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const i = parseInt(dot.dataset.sliderDot ?? '0', 10);
+        stopAuto();
+        goTo(i);
+        startAuto();
+      });
+    });
+
+    // Pause on hover / focus
+    section.addEventListener('mouseenter', stopAuto);
+    section.addEventListener('mouseleave', startAuto);
+    section.addEventListener('focusin', stopAuto);
+    section.addEventListener('focusout', startAuto);
+
+    // Keyboard navigation when section is focused
+    section.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        stopAuto();
+        goTo(current - 1);
+        startAuto();
+      }
+      if (e.key === 'ArrowRight') {
+        stopAuto();
+        goTo(current + 1);
+        startAuto();
+      }
+    });
+
+    // Touch/swipe support
+    let touchStartX = 0;
+    section.addEventListener(
+      'touchstart',
+      (e) => {
+        touchStartX = e.touches[0].clientX;
+      },
+      { passive: true }
+    );
+    section.addEventListener(
+      'touchend',
+      (e) => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) {
+          stopAuto();
+          goTo(diff > 0 ? current + 1 : current - 1);
+          startAuto();
+        }
+      },
+      { passive: true }
+    );
+
+    startAuto();
+  }
+
+  function initAllSliders() {
+    document.querySelectorAll<HTMLElement>('section[id]').forEach((section) => {
+      if (section.querySelector('[data-slider-track]')) initSlider(section);
+    });
+  }
+
+  // Run on initial load and after every Astro client-side navigation
+  document.addEventListener('astro:page-load', initAllSliders);
+</script>

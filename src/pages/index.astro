@@ -2,7 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import { Image } from 'astro:assets';
 
-import Hero from '~/components/widgets/Hero.astro';
+import ImageSlider from '~/components/widgets/ImageSlider.astro';
 import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
@@ -62,37 +62,83 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Section - matches the original carousel/banner area -->
-  <Hero
-    actions={[
+  <!-- Image Slider - mirrors the WordPress homepage carousel -->
+  <ImageSlider
+    slides={[
       {
-        variant: 'primary',
-        text: 'Descoperă proiectele',
-        href: '#proiecte',
-        icon: 'tabler:arrow-right',
+        image: '/images/slider/spratt-800x600.jpg',
+        alt: 'Învaţă să reuşeşti',
+        title: 'Învaţă să reuşeşti',
+        description:
+          'Proiectul se adresează elevilor cu o situaţie şcolară problematică, aflați în pragul corigenţei sau repetenţiei. Aceştia beneficiază gratuit de meditaţii şcolare şi activităţi recreativ-educative.',
+        href: '/proiecte/invata-sa-reusesti',
+        linkText: 'Află mai multe',
       },
       {
-        text: 'Donează',
-        href: '/sustine-ne',
-        icon: 'tabler:heart',
+        image: '/images/slider/5mz_m06fc9g-roman-mager-800x600.jpg',
+        alt: 'Şcoala Gimnazială Christiana',
+        title: 'Şcoala Gimnazială "Christiana"',
+        description:
+          'Program "A doua şansă" destinat persoanelor care au părăsit şcoala de cel puţin 4 ani şi doresc să finalizeze primele 8 sau 10 clase.',
+        href: '/proiecte/scoala-gimnaziala-christiana',
+        linkText: 'Află mai multe',
+      },
+      {
+        image: '/images/slider/rmhsymxupw0-jj-thompson-800x600.jpg',
+        alt: 'Burse Şcolare',
+        title: 'Burse Şcolare',
+        description:
+          'Sprijin material — rechizite, îmbrăcăminte, alimente — pentru elevii din familii defavorizate înscriși la şcoli guvernamentale, clasele I–XII.',
+        href: '/proiecte/burse-scolare',
+        linkText: 'Află mai multe',
+      },
+      {
+        image: '/images/slider/vqrezetw1co-annie-spratt-800x600.jpg',
+        alt: 'Meditaţii Şcolare',
+        title: 'Meditaţii Şcolare',
+        description:
+          'Cursuri gratuite de matematică, română, engleză şi alte discipline pentru elevi din clasele 1–8 cu dificultăţi de învăţare sau care doresc să-şi îmbunătăţească rezultatele.',
+        href: '/proiecte/meditatii-scolare',
+        linkText: 'Află mai multe',
+      },
+      {
+        image: '/images/slider/azmmuy2ql6a-kimson-doan-r-800x600.jpg',
+        alt: 'Centrul Comunitar pentru Tineret',
+        title: 'Centrul Comunitar pentru Tineret',
+        description:
+          'Activităţi de petrecere a timpului liber pentru copii şi tineri cu vârsta de 5–19 ani, menite să formeze şi să dezvolte abilităţi sociale pe parcursul anului şcolar şi în vacanţa de vară.',
+        href: '/proiecte/centrul-comunitar-pentru-tineret',
+        linkText: 'Află mai multe',
+      },
+      {
+        image: '/images/slider/epbixgcrtk0-janko-ferlic-800x600.jpg',
+        alt: 'Pentru Viaţă',
+        title: 'Pentru Viaţă',
+        description:
+          'Iniţiativă creştină de informare şi consiliere pre şi post-avort, cu scopul de a proteja viaţa omului de la concepţie până la moarte.',
+        href: '/proiecte/pentru-viata',
+        linkText: 'Află mai multe',
+      },
+      {
+        image: '/images/slider/wiyl0_fggko-clem-onojeghuo-800x600.jpg',
+        alt: 'Cantina Socială Sf. Arhidiacon Ştefan',
+        title: 'Cantina Socială "Sf. Arhidiacon Ştefan"',
+        description:
+          'O masă caldă zilnică pentru persoanele defavorizate — vârstnici singuri, bolnavi, persoane fără locuinţă — care nu îşi pot asigura hrana necesară.',
+        href: '/proiecte/cantina-sociala',
+        linkText: 'Află mai multe',
+      },
+      {
+        image: '/images/slider/pt-site-800x600.jpg',
+        alt: 'Părinţi şi adolescenţi',
+        title: '"Părinţi şi adolescenţi"',
+        description:
+          'Activităţi educative de dezvoltare şi remediere adresate părinţilor care vor să-şi îmbunătăţească abilităţile parentale şi adolescenţilor care doresc să se dezvolte personal.',
+        href: '/proiecte/parinti-si-adolescenti',
+        linkText: 'Află mai multe',
       },
     ]}
-  >
-    <Fragment slot="title">
-      <span class="text-accent">Construim</span> comunitatea
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      <span class="text-lg text-[#eaf6ff]/90">
-        Asociația Filantropică Medical-Creștină CHRISTIANA - Filiala Cluj oferă asistență medicală, socială și
-        educațională persoanelor defavorizate din 1991.
-      </span>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-gradient-to-b from-[#003459] to-[#1d79b6]"></div>
-    </Fragment>
-  </Hero>
+  />
 
   <!-- Donation Strip - matches the original donation banner -->
   <section class="bg-[#ed9f23] py-8">
@@ -117,17 +163,17 @@ const metadata = {
     </div>
   </section>
 
-  <!-- Stats - Organization numbers -->
-  <Stats
-    title="Christiana în cifre"
-    subtitle="Peste 30 de ani de activitate în slujba comunității"
-    stats={[
-      { title: 'Ani de activitate', amount: '30+' },
-      { title: 'Centre', amount: '6' },
-      { title: 'Proiecte', amount: '8' },
-      { title: 'Fondată', amount: '1991' },
-    ]}
-  />
+  <!-- Blog / News Section -->
+  <BlogLatestPosts
+    title="Noutăți"
+    linkText="Vezi toate noutățile"
+    count={3}
+    information="Ultimele noutăți și evenimente de la Asociația Christiana Cluj."
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-[#eaf6ff] dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
 
   <!-- Centers Section - with center logos from old site -->
   <section id="centre" class="py-16 md:py-20">
@@ -278,17 +324,17 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Blog / News Section -->
-  <BlogLatestPosts
-    title="Noutăți"
-    linkText="Vezi toate noutățile"
-    count={3}
-    information="Ultimele noutăți și evenimente de la Asociația Christiana Cluj."
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-[#eaf6ff] dark:bg-transparent"></div>
-    </Fragment>
-  </BlogLatestPosts>
+  <!-- Stats - Organization numbers -->
+  <Stats
+    title="Christiana în cifre"
+    subtitle="Peste 30 de ani de activitate în slujba comunității"
+    stats={[
+      { title: 'Ani de activitate', amount: '30+' },
+      { title: 'Centre', amount: '6' },
+      { title: 'Proiecte', amount: '8' },
+      { title: 'Fondată', amount: '1991' },
+    ]}
+  />
 
   <!-- Final CTA -->
   <CallToAction

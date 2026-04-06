@@ -4,6 +4,7 @@ title: 'Voluntari United Way, alături de copiii de la Şcoala Christiana'
 slug: voluntari-united-way-alaturi-de-copiii-de-la-scoala-christiana
 excerpt: '25 mai 2013 Un grup de voluntari United Way România, angajaţi ai companiei Genpact, şi-au petrecut ziua de miercuri alături de copiii care frecventează centrul...'
 category: noutati
+image: '/images/uploads/2013/04/Voluntari-21.jpg'
 ---
 
 25 mai 2013

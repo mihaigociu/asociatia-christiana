@@ -4,6 +4,7 @@ title: 'A Doua Șansă'
 slug: a-doua-sansa-afis
 excerpt: 'Program A Doua Șansă la Școala Gimnazială Christiana.'
 category: noutati
+image: '/images/uploads/2021/02/afis-a3-scoala-gimn-christiana-red.jpg'
 ---
 
 ![Afiș program A Doua Șansă](/images/uploads/2021/02/afis-a3-scoala-gimn-christiana-red.jpg)

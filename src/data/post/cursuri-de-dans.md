@@ -4,6 +4,7 @@ title: 'Meditații Școlare'
 slug: meditatii-scolare-afis
 excerpt: 'Meditații școlare organizate de Asociația Christiana.'
 category: noutati
+image: '/images/uploads/2024/04/afis-d.png'
 ---
 
 ![Afiș meditații școlare](/images/uploads/2024/04/afis-d.png)

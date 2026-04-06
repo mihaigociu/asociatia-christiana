@@ -74,6 +74,16 @@ export const adaptOpenGraphImages = async (
           };
         }
 
+        // Public path strings (e.g. /images/uploads/...) cannot be optimised by
+        // astroAssetsOptimizer at build time — return them as-is for OpenGraph.
+        if (typeof resolvedImage === 'string' && resolvedImage.startsWith('/')) {
+          return {
+            url: String(new URL(resolvedImage, astroSite)),
+            width: defaultWidth,
+            height: defaultHeight,
+          };
+        }
+
         let _image: OptimizedImage | undefined;
 
         if (

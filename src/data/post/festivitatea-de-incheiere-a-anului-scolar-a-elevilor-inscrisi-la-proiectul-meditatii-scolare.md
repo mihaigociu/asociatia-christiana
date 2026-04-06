@@ -4,6 +4,7 @@ title: 'Festivitatea de incheiere a anului scolar a elevilor inscrisi la proiect
 slug: festivitatea-de-incheiere-a-anului-scolar-a-elevilor-inscrisi-la-proiectul-meditatii-scolare
 excerpt: 'Joi, 13 iunie 2013, Proiectul de Meditaţii Şcolare şi-a încheiat activitatea pe anul şcolar 2012-2013 în cadrul unei festivităţi de premiere a elevilor merituoşi.'
 category: noutati
+image: '/images/uploads/2013/06/IMG_3763.jpg'
 ---
 
 ## 13 iunie 2013

@@ -4,6 +4,7 @@ title: 'Simpozionul Filantropia – Liturghia Slujirii Aproapelui'
 slug: simpozionul-filantropia-liturghia-slujirii-aproapelui
 excerpt: 'AFMC Christiana – Filiala Cluj a fost reprezentată la Simpozionul cu tema „Filantropia – liturghia slujirii aproapelui", eveniment înscris în seria momentelor Anului comemorativ al Părintelui Dumitru Stăniloae.'
 category: noutati
+image: '/images/uploads/2013/05/DSC07971.jpg'
 ---
 
 AFMC CHRISTIANA – Filiala Cluj a fost reprezentată de o echipă joi, 16 mai 2013, la Simpozionul cu tema „Filantropia – liturghia slujirii aproapelui". Evenimentul s-a înscris în seria momentelor Anului comemorativ al Părintelui Dumitru Stăniloae şi reuneşte nume de referinţă ale teologiei româneşti şi practicieni ai lucrării social-filantropice.

@@ -4,6 +4,7 @@ title: 'In asteptarea primaverii'
 slug: in-asteptarea-primaverii
 excerpt: 'Copiii din cadrul proiectului "Burse școlare" au încercat să aducă mai aproape căldura primăverii, prin creațiile lor. Atelierul de mărțișoare a reprezentat o provocare pentru cei 14 copii plini de energie.'
 category: noutati
+image: '/images/uploads/2014/02/IMG_0236.jpg'
 ---
 
 ## 05 februarie 2014
